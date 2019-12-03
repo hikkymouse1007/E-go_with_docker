@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+body{
+	margin: 0;
+}
+
+h1{
+	margin: 0;
+}
+
+/*header*/
+header {
+	width: 100%;
+	height: 80px;
+	display:flex;
+	align-items: center;
+	background-color: #2a7eb1;
+}
+header .inner {
+	margin:auto;
+	max-width:100%;
+	width: 1020px;
+}
+
+header .flexbox {
+	align-items:center;
+	display: flex;
+	justify-content:space-between;
+}
+
+.logo-img img
+{
+	vertical-align: bottom;
+}
+
+.nav-global ul {
+	list-style:none ;
+}
+
+.nav-global li {
+	margin:0 15px;
+}
+
+.nav-global li:last-child {
+	margin-right: 0;
+}
+
+.nav-global a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*body*/
+
+.container {
+	min-height:600px;
+	widht:100%;
+	background-color:ivory;
+}
+
+/*footer*/
+footer {
+	width: 100%;
+	height: 80px;
+	display:flex;
+	align-items: center;
+	background-color: #2a7eb1;
+}
+footer .inner {
+	margin:auto;
+	max-width:100%;
+	width: 1020px;
+}
+
+footer .flexbox {
+	align-items:center;
+	display: flex;
+	justify-content:center;
+}
+
+.logo-img img
+{
+	vertical-align: bottom;
+}
+
