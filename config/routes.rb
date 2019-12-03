@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#new'
-  get 'users/new'
+  root 'users#home'
+  get 'users/new' =>'users#new', as: 'users_new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
