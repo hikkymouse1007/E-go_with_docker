@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   def home
 
   end
@@ -13,16 +14,29 @@ class UsersController < ApplicationController
 
     if @user.save
       log_in @user
-      flash[:success] = 'You have successfully logged in.'
+      flash[:success] = "Hello #{@user.name}! Welcome to E-go!!"
       redirect_to user_path(@user)
     else
       render 'new'
     end
-
   end
 
   def show
   	@user = User.find(params[:id])
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+   def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
 
