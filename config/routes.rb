@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   ##users
   get  'signup' => 'users#new',as:"signup"
-  post 'signup' => 'users#create',as:"users_create"
+  post 'signup' => 'users#create',as:"create_user"
   get  'users/:id' => 'users#show',as:"user"
+  get  'users/:id/edit' => 'users#edit',as:"edit_user"
+  patch  'users/:id' => 'users#update',as:"update_user"
+  delete 'users/:id',  to: 'users#destroy',as:"delete_user"
   ##session
   get   'login',   to: 'sessions#new'
   post   'login',   to: 'sessions#create'
