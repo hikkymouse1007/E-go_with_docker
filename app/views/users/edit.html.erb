@@ -20,6 +20,7 @@
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
+      <%= link_to "Leave this site", delete_user_path(@user), method: :delete,  data: { confirm: "You sure?" }, class: "btn btn-danger" %>
     </div>
   </div>
 </div>

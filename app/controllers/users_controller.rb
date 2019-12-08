@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update,:show]
-  before_action :correct_user,   only: [:edit, :update,:show]
+  before_action :logged_in_user, only: [:edit, :update,:show,:destroy]
+  before_action :correct_user,   only: [:edit, :update,:show,:destroy]
   def home
 
   end
@@ -36,6 +36,12 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to root_url
   end
 
   def logged_in_user
