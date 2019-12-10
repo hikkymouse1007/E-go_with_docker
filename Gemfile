@@ -80,3 +80,4 @@ gem 'seed-fu', '~> 2.3'
 
 gem 'feedjira'
 
+gem 'httparty'
