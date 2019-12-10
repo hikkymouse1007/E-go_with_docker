@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update,:show,:destroy]
   before_action :correct_user,   only: [:edit, :update,:show,:destroy]
-  def home
+  before_action :set_feed, only: :home
 
+  def home
+    @entries = @feed1.entries.order('published desc')
   end
 
   def new
@@ -52,16 +54,22 @@ class UsersController < ApplicationController
     end
   end
 
+    private
 
-  private
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+                                 :password_confirmation)
+  end
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
-    end
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
 
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
+  def set_feed
+    # @feed = Feed.find(params[:id])
+    @feed1 = Feed.find(1)
+  end
+
+
 end
