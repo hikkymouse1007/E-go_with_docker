@@ -1,15 +1,15 @@
 <div class="inner ">
 	<div class="row">
-    <h1>The Latest Newses</h1>
+    <h1>The Latest News</h1>
     <% @entries.each do |entry| %>
-    <%= link_to entry.url do %>
+    <%= link_to entry.url, target: :_blank do %>
     <div class="col s12 m12">
       <div class="card white darken-1">
         <div class="card-content black-text">
           <span class="card-title "><%=  entry.title %></span>
           <p>published <%= time_ago_in_words(entry.published) %> ago.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action black-text">
           <%=  entry.url %>
         </div>
       </div>
@@ -18,5 +18,5 @@
     <% end %>
   </div>
 </div>
-    
+
 
