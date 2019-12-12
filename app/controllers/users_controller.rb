@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :set_feed, only: :home
 
   def home
-    @entries = @feed1.entries.order('published desc')
+    @entries = @feed1.entries.order('published desc').page(params[:page]).per(5)
   end
 
   def new
@@ -70,6 +70,4 @@ class UsersController < ApplicationController
     # @feed = Feed.find(params[:id])
     @feed1 = Feed.find(1)
   end
-
-
 end
