@@ -13,16 +13,15 @@ class UserArticlesController < ApplicationController
 
   end
   def new
-
+    @article = UserArticle.new
   end
 
   def create
    	@article = UserArticle.new(user_article_params) #bui]d:アソシエーションに紐づくnewメゾット
     @article.user_id = current_user.id
-    binding.pry
  	  if @article.save
       flash[:success] = "Article created!"
-      redirect_to new_user_article(current_user)
+      redirect_to user_path(current_user)
     end
   end
 
