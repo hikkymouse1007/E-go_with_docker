@@ -1,0 +1,6 @@
+<p><%= @article.title %></p>
+<p><%= @article.content%></p>
+<p>vacabulary</p>
+<% @words.each do |word| %>
+' <%= link_to word.downcase,'#' %> '
+<% end %>
