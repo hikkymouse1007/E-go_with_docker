@@ -1,5 +1,6 @@
 class UserArticle < ApplicationRecord
 	belongs_to :user
 	belongs_to :category
-	validates :user_id, presence: true	
+	has_many :vocabs,dependent: :destroy
+	validates :user_id, presence: true
 end

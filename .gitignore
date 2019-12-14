@@ -30,5 +30,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-#Ignore database.yml
-/config/database.yml
+# Ignore database.yml
+/config/database.ym
+
+# lgnore local_env file and json file
+/config/local_env.yml
+/config/google_cloud.json

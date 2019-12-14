@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   # get  'articles/:id' => 'user_articles#show',as:"user_article"
   # get  'articles/' => 'user_articles#show',as:"user_article"
   resources :user_articles
+
+  ##vocabs
+  post 'user_articles/:id', to: 'vocabs#create',as: 'create_vocab'
+  delete 'user_articles', to: 'vocabs#destroy',as: 'destroy_vocab'
 end
