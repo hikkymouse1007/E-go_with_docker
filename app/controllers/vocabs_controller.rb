@@ -10,27 +10,20 @@ class VocabsController < ApplicationController
 
 		# Translates some text into Russian
 		@japanese = translate.translate @english, to: target
-	 	#binding.pry
 	 	# @vocab = vocab.new(vocab_params)
 	 	# binding.pry
 	 	@vocab = Vocab.new
-	 	@vocab.eng = @english
-	 	@vocab.jpn = @japanese
-
+	 	# @vocab.english = @english
+	 	@vocab.japanese = @japanese
+	 	@vocab.english = @english
+	 	@vocab.user_article_id = params[:user_article_id]
 	 	@vocab.save
-	 	redirect_to show_path
+	 	redirect_to user_article_path(params[:user_article_id])
 	end
 
 	def destroy
 		vocab = Vocab.find(params[:id])
         vocab.destroy
-        redirect_to show_path
+        redirect_to user_article_path(params[:user_article_id])
 	end
-
-		private
-
-    def vocab_params
-  	    # params.require(:vocab).permit(:eng)
-  	    params.require(:vocab).permit(:english)
-    end
 end

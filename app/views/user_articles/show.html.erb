@@ -2,5 +2,8 @@
 <p><%= @article.content%></p>
 <p>vacabulary</p>
 <% @words.each do |word| %>
-<%= link_to word.downcase, create_path(user_article_id:params[:id],english: word), method: :post, remote:true  %>
+<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,remote: true %>
+<% end %>
+<% @vocabs.each do |vocab| %>
+<p><%= vocab.english %><%= vocab.japanese %><%= link_to  "Delete", destroy_vocab_path(user_article_id:params[:id],id: vocab.id), method: :delete, remote: true %></p>
 <% end %>
