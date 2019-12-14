@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Hello #{@user.name}! Welcome to E-go!!"
-      redirect_back_or user_path(@user)
+      redirect_back_or root_path
     else
       render 'new'
     end
@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @articles = current_user.user_articles
   end
 
   def edit
