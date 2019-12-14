@@ -89,3 +89,5 @@ gem 'kaminari'
 
 gem "google-cloud"
 gem "google-cloud-translate"
+
+gem "news-api"
