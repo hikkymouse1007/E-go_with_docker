@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   post   'login',   to: 'sessions#create'
   delete 'logout',  to: 'sessions#destroy'
 
-
+  ##article
+  # get  'articles' => 'user_articles#index',as:"user_articles"
+  # get  'articles/:id' => 'user_articles#show',as:"user_article"
+  # get  'articles/' => 'user_articles#show',as:"user_article"
+  resources :user_articles
 end
