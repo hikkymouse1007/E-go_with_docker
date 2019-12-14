@@ -2,5 +2,5 @@
 <p><%= @article.content%></p>
 <p>vacabulary</p>
 <% @words.each do |word| %>
-' <%= link_to word.downcase,'#' %> '
+<%= link_to word.downcase, create_path(user_article_id:params[:id],english: word), method: :post, remote:true  %>
 <% end %>
