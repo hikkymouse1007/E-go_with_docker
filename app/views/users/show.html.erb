@@ -9,6 +9,7 @@
           <span class="card-title"></span>
           <%= article.title%>
           <p><%= article.content%></p>
+          <%= link_to  "Delete", user_article_path(id: article.id), method: :delete %></p>
         </div>
         <div class="card-action">
         </div>

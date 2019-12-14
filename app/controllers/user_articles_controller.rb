@@ -17,11 +17,20 @@ class UserArticlesController < ApplicationController
   end
 
   def create
- 	@article = current_user.user_articles.new(user_article_params) #bui]d:アソシエーションに紐づくnewメゾット
+   	@article = UserArticle.new(user_article_params) #bui]d:アソシエーションに紐づくnewメゾット
+    @article.user_id = current_user.id
+    binding.pry
  	  if @article.save
       flash[:success] = "Article created!"
       redirect_to new_user_article(current_user)
     end
+  end
+
+  def destroy
+    article = UserArticle.find(params[:id])
+    article.destroy
+    flash[:success] = "Article deleted."
+    redirect_to user_path(current_user)
   end
 
   	private
@@ -30,10 +39,5 @@ class UserArticlesController < ApplicationController
   	params.require(:user_article).permit(:category_id,:title,:content,:url,:published_at)
   end
 
-  def destroy
-    article = UserArticle.find(params[:id])
-    article.destroy
-    flash[:success] = "Article deleted."
-    redirect_to user_articles_path
-  end
+
 end
