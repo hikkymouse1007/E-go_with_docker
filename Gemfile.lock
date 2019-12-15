@@ -81,6 +81,10 @@ GEM
     declarative (0.0.10)
     declarative-option (0.1.0)
     digest-crc (0.4.1)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
     erubi (1.9.0)
     execjs (2.7.0)
     faraday (0.17.1)
@@ -505,6 +509,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dotenv-rails
   google-cloud
   google-cloud-translate
   jbuilder (~> 2.5)

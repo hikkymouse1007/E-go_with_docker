@@ -85,3 +85,5 @@ gem "google-cloud"
 gem "google-cloud-translate"
 
 gem "news-api"
+
+gem 'dotenv-rails'
