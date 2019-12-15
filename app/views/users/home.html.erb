@@ -1,17 +1,21 @@
 <div class="inner ">
 	<div class="row">
-    <% @top_headlines.each do |top_headline| %>
+    <h3>Headline News</h3>
+    <% @all_articles.each do |all_article| %>
     <div class="col s12 m6">
       <div class="card blue-grey darken-1 hoverable">
         <div class="card-content white-text">
-          <span class="card-title"><%= top_headline.content %></span>
-          <p><%= top_headline.id %></p>
+          <span class="card-title"><%= all_article.title %></span>
+          <p><%= all_article.description %></p>
+          <p><%= all_article.content %></p>
         </div>
         <div class="card-action">
+          <%= link_to all_article.url, all_article.url %>
         </div>
       </div>
     </div>
     <% end %>
+    <%= link_to "ニュースサイトを探す",publishers_path%>
   </div>
 </div>
 
