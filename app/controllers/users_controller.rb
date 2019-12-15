@@ -41,6 +41,7 @@
   def show
   	@user = User.find(params[:id])
     @articles = current_user.user_articles
+    @vocab_ary = []
   end
 
   def edit
