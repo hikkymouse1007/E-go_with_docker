@@ -36,3 +36,7 @@
 # lgnore local_env file and json file
 /config/local_env.yml
 /config/google_cloud.json
+
+# lgnore local_env file and json file
+.env.development
+.env.production

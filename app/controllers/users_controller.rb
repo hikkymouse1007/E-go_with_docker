@@ -1,10 +1,26 @@
-class UsersController < ApplicationController
+  class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update,:show,:destroy]
   before_action :correct_user,   only: [:edit, :update,:show,:destroy]
-  before_action :set_feed, only: :home
 
   def home
-    @entries = @feed1.entries.order('published desc').page(params[:page]).per(5)
+    news_api_key = ENV["NEWS_API_KEY_ID"]
+    newsapi = News.new("#{news_api_key}")
+    @top_headlines = newsapi.get_top_headlines(sources: 'bbc-news,the-verge')
+    @sources = newsapi.get_sources(language: 'en',country: 'us')
+    @all_articles = newsapi.get_everything(
+                                      sources: 'bbc-news,the-verge',
+                                      domains: 'bbc.co.uk,techcrunch.com',
+                                      # from: '2017-12-01',
+                                      # to: '2017-12-12',
+                                      language: 'en',
+                                      sortBy: 'relevancy',
+                                      page: 1)
+  end
+
+  def index
+    news_api_key = ENV["NEWS_API_KEY_ID"]
+    newsapi = News.new("#{news_api_key}")
+    @sources = newsapi.get_sources(language: 'en',country: 'us')
   end
 
   def new

@@ -1,25 +1,21 @@
 <div class="inner ">
 	<div class="row">
-    <h1>The Latest News</h1>
-    <% @entries.each do |entry| %>
-    <%= link_to entry.url, target: :_blank do %>
-    <div class="col s12 m12">
-      <div class="card white darken-1 hoverable">
-        <div class="card-content black-text">
-          <span class="card-title "><%=  entry.title %></span>
-          <p>published <%= time_ago_in_words(entry.published) %> ago.</p>
+    <h3>Headline News</h3>
+    <% @all_articles.each do |all_article| %>
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1 hoverable">
+        <%= link_to(all_article.url, class: 'list-content') do %>
+        <%=  image_tag all_article.urlToImage, size: '320x240' %>
+        <div class="card-content white-text">
+          <span class="card-title">
+             <%= all_article.title %></span>
         </div>
-        <div class="card-action black-text">
-          <%=  entry.url %>
-        </div>
+        <% end %>
       </div>
     </div>
     <% end %>
-    <% end %>
+    <%= link_to "ニュースサイトを探す",publishers_path%>
   </div>
-    <div class="pagination center-align">
-      <%= paginate @entries %>
-    </div>
 </div>
 
 
