@@ -1,10 +1,18 @@
 <div class="inner ">
 	<div class="row">
-    <h1>The Latest News</h1>
-    <div class="pagination center-align">
-    
+    <% @top_headlines.each do |top_headline| %>
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1 hoverable">
+        <div class="card-content white-text">
+          <span class="card-title"><%= top_headline.content %></span>
+          <p><%= top_headline.id %></p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
     </div>
-</div>
+    <% end %>
+  </div>
 </div>
 
 
