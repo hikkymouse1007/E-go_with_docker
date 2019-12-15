@@ -2,17 +2,15 @@
 	<div class="row">
     <h3>Headline News</h3>
     <% @all_articles.each do |all_article| %>
-    <div class="col s12 m12">
+    <div class="col s12 m6">
       <div class="card blue-grey darken-1 hoverable">
+        <%= link_to(all_article.url, class: 'list-content') do %>
         <%=  image_tag all_article.urlToImage, size: '320x240' %>
         <div class="card-content white-text">
           <span class="card-title">
              <%= all_article.title %></span>
-          <p><%= all_article.description %></p>
         </div>
-        <div class="card-action">
-          <%= link_to all_article.url, all_article.url %>
-        </div>
+        <% end %>
       </div>
     </div>
     <% end %>
