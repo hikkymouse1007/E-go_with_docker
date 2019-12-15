@@ -1,10 +1,9 @@
-class UsersController < ApplicationController
+  class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update,:show,:destroy]
   before_action :correct_user,   only: [:edit, :update,:show,:destroy]
-  before_action :set_feed, only: :home
 
   def home
-    @entries = @feed1.entries.order('published desc').page(params[:page]).per(5)
+    
   end
 
   def new
