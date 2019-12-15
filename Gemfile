@@ -77,12 +77,6 @@ group :production do
   gem 'mysql2'
 end
 
-gem 'seed-fu', '~> 2.3'
-
-gem 'feedjira'
-
-gem 'httparty'
-
 gem 'rubocop', '~> 0.77.0', require: false
 
 gem 'kaminari'
