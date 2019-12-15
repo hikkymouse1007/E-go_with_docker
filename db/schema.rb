@@ -18,25 +18,6 @@ ActiveRecord::Schema.define(version: 2019_12_14_100908) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "entries", force: :cascade do |t|
-    t.string "title"
-    t.datetime "published"
-    t.text "content"
-    t.string "url"
-    t.string "author"
-    t.integer "feed_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "feeds", force: :cascade do |t|
-    t.string "name"
-    t.string "url"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "user_articles", force: :cascade do |t|
     t.integer "user_id"
     t.integer "category_id"
