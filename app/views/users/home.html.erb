@@ -1,7 +1,6 @@
 <div class="header-content">
 <%= image_tag 'main-content.jpg' %>
 </div>
-<div class="container">
 <div class="inner ">
   <div class="row">
     <h3>Headline News</h3>
@@ -23,7 +22,6 @@
       </div>
     </div>
     <% end %>
-    <%= link_to "ニュースサイトから見つける",publishers_path%>
+    <%= link_to "ニュースサイトから見つける",publishers_path(category: "general")%>
   </div>
-</div>
 </div>
