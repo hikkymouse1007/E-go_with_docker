@@ -34,8 +34,22 @@ class UserArticlesController < ApplicationController
       flash.now[:danger] = '記入漏れがあります'
       render 'new'
     end
-
   end
+
+  def edit
+    @article = UserArticle.find(params[:id])
+  end
+
+  def update
+    @article = UserArticle.find(params[:id])
+    if @article.update(user_article_params)
+    #showへ
+      redirect_to user_article_path(@article), notice: 'Article updated!'
+    else
+      render :edit
+    end
+  end
+
 
   def destroy
     article = UserArticle.find(params[:id])
