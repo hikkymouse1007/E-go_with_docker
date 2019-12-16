@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   ##publishers
   get   'publishers',   to: 'publishers#index' 
-  get   'publishers/:name',   to: 'publishers#show' as:"show_publisher"
+  get   'publishers/:name',   to: 'publishers#show', as:"show_publisher"
 
   ##user_articles
   # get  'articles' => 'user_articles#index',as:"user_articles"

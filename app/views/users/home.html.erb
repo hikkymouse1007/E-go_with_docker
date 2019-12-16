@@ -4,24 +4,24 @@
 <div class="inner ">
   <div class="row">
     <h3>Headline News</h3>
-    <% @all_articles.each do |article| %>
+    <% @all_articles.each do |headline| %>
     <div class="col s12 m6">
       <div class="card blue-grey darken-1 hoverable">
-        <%= link_to(article.url,target: :_blank) do %>
+        <%= link_to(headline.url,target: :_blank) do %>
         <div class="card-image">
-        <%=  image_tag article.urlToImage, size: 'auto' %>
+        <%=  image_tag headline.urlToImage,size:"auto" %>
         </div>
         <div class="card-content white-text">
           <span class="card-title">
-             <%= article.title %></span>
+             <%= headline.title %></span>
         </div>
         <% end %>
         <div class="card-action">
-          <%= link_to "このニュースを記事にする", new_user_article_path(title: article.title,url: article.url, publishedAt: article.publishedAt) %>
+          <%= link_to "このニュースを記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
         </div>
       </div>
     </div>
     <% end %>
-    <%= link_to "ニュースサイトから見つける",publishers_path(category: "general")%>
+    <%= link_to "ニュースサイトから記事を見つける",publishers_path(category: "general")%>
   </div>
 </div>
