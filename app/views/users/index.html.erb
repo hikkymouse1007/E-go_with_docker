@@ -1,14 +1,25 @@
+<div class="categories">
+<%= link_to "business",publishers_path(category:"business")  %>
+<%= link_to "entertainment",publishers_path(category:"entertainment")  %>
+<%= link_to "general",publishers_path(category:"general")  %>
+<%= link_to "science",publishers_path(category:"science")  %>
+<%= link_to "sports",publishers_path(category:"sports")  %>
+<%= link_to "technology",publishers_path(category:"technology")  %>
+</div>
+
+<h1><%= @category.capitalize %></h1>
 <% @sources.each do |source| %>
+  <%= link_to(source.url,target: :_blank) do %>
     <div class="col s12 m6">
       <div class="card blue-grey darken-1 hoverable">
-        <div class="card-content white-text">
-          <span class="card-title"><%= source.name %></span>
+        <div class="card-content ">
+          <span class="card-title orange-text"><%= source.name %></span>
           <p><%= source.description %></p>
-          <p>Category:<%= source.category %></p>
-        </div>
-        <div class="card-action">
-          <%= link_to source.url, source.url %>
+          <div class="card-action">
+            Category:<%= source.category %>
+          </div>
         </div>
       </div>
     </div>
-    <% end %>
+  <% end %>
+<% end %>

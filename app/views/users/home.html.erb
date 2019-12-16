@@ -1,21 +1,27 @@
+<div class="header-content">
+<%= image_tag 'main-content.jpg' %>
+</div>
 <div class="inner ">
-	<div class="row">
+  <div class="row">
     <h3>Headline News</h3>
-    <% @all_articles.each do |all_article| %>
+    <% @all_articles.each do |article| %>
     <div class="col s12 m6">
       <div class="card blue-grey darken-1 hoverable">
-        <%= link_to(all_article.url, class: 'list-content') do %>
-        <%=  image_tag all_article.urlToImage, size: '320x240' %>
+        <%= link_to(article.url,target: :_blank) do %>
+        <div class="card-image">
+        <%=  image_tag article.urlToImage, size: 'auto' %>
+        </div>
         <div class="card-content white-text">
           <span class="card-title">
-             <%= all_article.title %></span>
+             <%= article.title %></span>
         </div>
         <% end %>
+        <div class="card-action">
+          <%= link_to "このニュースを記事にする", new_user_article_path(title: article.title,url: article.url, publishedAt: article.publishedAt) %>
+        </div>
       </div>
     </div>
     <% end %>
-    <%= link_to "ニュースサイトを探す",publishers_path%>
+    <%= link_to "ニュースサイトから見つける",publishers_path(category: "general")%>
   </div>
 </div>
-
-
