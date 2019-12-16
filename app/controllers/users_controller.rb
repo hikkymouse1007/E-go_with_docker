@@ -41,7 +41,17 @@
   def show
   	@user = User.find(params[:id])
     @articles = current_user.user_articles
-    @vocab_ary = []
+    vocab_ary = []
+    vocab_ary_eng = []
+    @articles.each do |article|
+      article.vocabs.each do |vocab|
+        unless vocab_ary_eng.include?(vocab.english)
+          vocab_ary << vocab
+            vocab_ary_eng << vocab.english
+          end
+        end
+      end
+    @vocabs = vocab_ary.sort_by{ |v| v[:english].downcase }
   end
 
   def edit

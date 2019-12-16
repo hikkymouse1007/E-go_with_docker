@@ -26,13 +26,8 @@
 
   <div id="vocabulary" class="col s12 red">
     <p>Vocabularies</p>
-    <% @articles.each do |article| %>
-      <% article.vocabs.each do |vocab|%></p>
-        <% unless @vocab_ary.include?(vocab.english) %>
-          <%= vocab.english %>:<%= vocab.japanese %>
-          <% @vocab_ary << vocab.english %>
-        <% end %>
-      <% end %>
+    <% @vocabs.each do |vocab| %>
+      <p><%= vocab.english %><%= vocab.japanese %></p>
     <% end %>
 
   </div>
