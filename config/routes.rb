@@ -2,10 +2,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'users#home'
   # root 'sessions#new'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   ##users
-  get  'users/publishers' => 'users#index',as:"publishers"
   get  'signup' => 'users#new',as:"signup"
   post 'signup' => 'users#create',as:"create_user"
   get  'users/:id' => 'users#show',as:"user"
@@ -17,7 +15,11 @@ Rails.application.routes.draw do
   post   'login',   to: 'sessions#create'
   delete 'logout',  to: 'sessions#destroy'
 
-  ##article
+  ##publishers
+  get   'publishers',   to: 'publishers#index' 
+  get   'publishers/:name',   to: 'publishers#show' as:"show_publisher"
+
+  ##user_articles
   # get  'articles' => 'user_articles#index',as:"user_articles"
   # get  'articles/:id' => 'user_articles#show',as:"user_article"
   # get  'articles/' => 'user_articles#show',as:"user_article"
@@ -26,4 +28,5 @@ Rails.application.routes.draw do
   ##vocabs
   post 'user_articles/:id', to: 'vocabs#create',as: 'create_vocab'
   delete 'user_articles', to: 'vocabs#destroy',as: 'destroy_vocab'
+
 end
