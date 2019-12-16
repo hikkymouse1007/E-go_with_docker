@@ -17,16 +17,24 @@ class UserArticlesController < ApplicationController
 
   def new
     @article = UserArticle.new
+    @title = params[:title]
+    @published_at = params[:publishedAt]
+    @url = params[:url]
   end
 
   def create
    	@article = UserArticle.new(user_article_params) #bui]d:アソシエーションに紐づくnewメゾット
     @article.user_id = current_user.id
+
  	  if @article.save
       flash[:success] = "Article created!"
       # redirect_to user_path(current_user)
       redirect_to user_article_path(@article)
+    else
+      flash.now[:danger] = '記入漏れがあります'
+      render 'new'
     end
+
   end
 
   def destroy
