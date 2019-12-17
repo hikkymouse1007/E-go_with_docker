@@ -13,7 +13,7 @@ class PublishersController < ApplicationController
 	def show
 	    news_api_key = ENV["NEWS_API_KEY_ID"]
 	    newsapi = News.new("#{news_api_key}")
-	    @name = params[:name]
-	    @top_headlines = newsapi.get_top_headlines(sources: @name)
+	    @sources = params[:sources]
+	    @top_headlines = newsapi.get_top_headlines(sources: @sources)
 	end
 end
