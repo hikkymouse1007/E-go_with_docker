@@ -6,13 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# # ActiveSupport::JSONを使ってhoge.jsonをデコードしてrubyオブジェクトに変換。変数jsonに展開
-# json = ActiveSupport::JSON.decode(File.read('publishers.json'))
 
-# # 変数jsonに入った配列状態のjsonデータを一つ一つ取り出して、モデル.createを使ってdbに投入
-# json.each do |data|
-#   Publisher.create(name:data['name'], description:data['description'], name:data['name'], url:data['url'], language:data['language'], country:data['country'])
-# end
 news_api_key = ENV["NEWS_API_KEY_ID"]
 uri1 = URI.parse("https://newsapi.org/v2/sources?language=en&apiKey=#{news_api_key}")#外部英語ニュースサイト
 json1= Net::HTTP.get(uri1)
