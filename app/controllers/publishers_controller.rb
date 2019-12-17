@@ -1,15 +1,19 @@
 class PublishersController < ApplicationController
 	def index
-		news_api_key = ENV["NEWS_API_KEY_ID"]
-    	newsapi = News.new("#{news_api_key}")
-    	@category = params[:category]
-   	    @sources = newsapi.get_sources(language: 'en',country: 'us',category: @category)
+		# news_api_key = ENV["NEWS_API_KEY_ID"]
+  #   	newsapi = News.new("#{news_api_key}")
+  #   	@category = params[:category]
+  	   	@category = params[:category]
+   	    @sources = Publisher.where(category:@category)
+
+
+
 	end
 
 	def show
 	    news_api_key = ENV["NEWS_API_KEY_ID"]
 	    newsapi = News.new("#{news_api_key}")
-	    @name = params[:name]
-	    @top_headlines = newsapi.get_top_headlines(sources: @name)
+	    @sources = params[:sources]
+	    @top_headlines = newsapi.get_top_headlines(sources: @sources)
 	end
 end

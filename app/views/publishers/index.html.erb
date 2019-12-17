@@ -17,7 +17,7 @@
           <p>Category:<%= source.category %></p>
           <p><%= link_to source.url, source.url, target: :_blank %></p>
           <div class="card-action">
-            <%= link_to "Headline News", show_publisher_path(name: source.name) %>
+            <%= link_to "Headline News", show_publisher_path(sources: source.source_id) %>
           </div>
         </div>
       </div>

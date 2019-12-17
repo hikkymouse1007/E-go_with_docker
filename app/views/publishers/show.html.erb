@@ -1,3 +1,4 @@
+<% if @top_headlines.present? %>
 <% @top_headlines.each do |headline| %>
     <div class="col s12 m6">
       <div class="card blue-grey darken-1 hoverable">
@@ -15,4 +16,7 @@
         </div>
       </div>
     </div>
-    <% end %>
+<% end %>
+<% else %>
+  <p>News doesn't exist here</p>
+<% end %>
