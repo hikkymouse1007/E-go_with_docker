@@ -20,10 +20,7 @@ Rails.application.routes.draw do
   get   'publishers',   to: 'publishers#index' 
   get   'publishers/:name',   to: 'publishers#show', as:"show_publisher"
 
-  ##user_articles
-  # get  'articles' => 'user_articles#index',as:"user_articles"
-  # get  'articles/:id' => 'user_articles#show',as:"user_article"
-  # get  'articles/' => 'user_articles#show',as:"user_article"
+
   resources :user_articles
 
 

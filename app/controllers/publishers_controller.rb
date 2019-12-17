@@ -4,6 +4,8 @@ class PublishersController < ApplicationController
     	newsapi = News.new("#{news_api_key}")
     	@category = params[:category]
    	    @sources = newsapi.get_sources(language: 'en',country: 'us',category: @category)
+
+
 	end
 
 	def show
