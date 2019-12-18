@@ -9,6 +9,8 @@ class CreatePublishers < ActiveRecord::Migration[5.2]
 	  t.string "language"
 	  t.string "country"
 	  t.timestamps
+
+	  drop_table :categories
     end
   end
 end

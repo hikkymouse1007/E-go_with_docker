@@ -9,12 +9,11 @@
   <div id="your-article" class="col s12 blue">
   <% @articles.each do |article| %>
     <div class="col s12 m12">
-      <div class="card blue darken-1">
+      <div class="card yellow lighten-1">
         <div class="card-content white-text">
-          <span class="card-title"></span>
-          <p>"<%= link_to  article.title, user_article_path(id: article.id) %>"</p>
+          <span class="card-title"><%= link_to  article.title, user_article_path(id: article.id) %></span>
           <p><%= article.published_at%></p>
-          <p>URL:<%= article.url%></p>
+          <p>URL:<%= link_to article.url,article.url%></p>
           <p><%= link_to  "Edit", edit_user_article_path(id:article.id) %></p>
           <p><%= link_to  "Delete", user_article_path(id: article.id), method: :delete %></p>
         </div>
@@ -27,9 +26,24 @@
 
   <div id="vocabulary" class="col s12 red">
     <p>Vocabularies</p>
+    <table class="centered">
+  <thead>
+    <tr>
+        <th>Word</th>
+        <th>Meaning</th>
+    </tr>
+  </thead>
+
+  <tbody>
     <% @vocabs.each do |vocab| %>
-      <p><%= vocab.english %><%= vocab.japanese %></p>
+    <tr>
+      <td><%= vocab.english %></td>
+      <td><%= vocab.japanese %></td>
+    </tr>
     <% end %>
+  </tbody>
+</table>
+
 
   </div>
     <p><%= link_to "記事の新規投稿" , new_user_article_path(current_user) %></p>
