@@ -1,20 +1,28 @@
+
 <div class="container">
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="center hide-on-med-and-down">
+        <li><%= link_to "Technology",publishers_path(category:"technology")  %></li>
+      </ul>
+    </div>
+</nav>
   <%= link_to "登録している単語一覧", user_words_path %>
 <div class="inner ">
   <div class="row">
-
-    <div class="your-article" >
     <% @articles.each do |article| %>
       <div class="col s12 m12">
         <div class="card blue-grey darken-1 hoverable">
-          <div class="card-content white-text">
-            <span class="card-title">
-              Title:<%= link_to article.title, user_article_path(id: article.id) %>
+          <div class="card-content ">
+            <span class="card-title ">
+              <%= link_to article.title, user_article_path(id: article.id), class: "orange-text"%>
             </span>
+            <div class="content white-text">
             <p><%= article.japanese_title%></p>
             <p>Category:<%= article.category %></p>
             <p> Published at <%= article.published_at %></p>
-            <p>Source:<%= link_to article.url,article.url,target: :_blank%></p>
+            <p>外部リンク:<%= link_to article.url,article.url,target: :_blank%></p>
+            </div>
           </div>
           <div class="card-action center-align">
             <div class="option">
@@ -26,8 +34,10 @@
       </div>
       <% end %>
     </div>
-    <%= paginate @articles %>
     </div>
   </div>
+<div class="pagination center-align">
+  <%= paginate @articles %>
 </div>
+
 

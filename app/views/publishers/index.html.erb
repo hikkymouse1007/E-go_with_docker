@@ -2,12 +2,12 @@
   <nav>
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "business",publishers_path(category:"business")  %></li>
-        <li><%= link_to "entertainment",publishers_path(category:"entertainment")  %></li>
-        <li><%= link_to "general",publishers_path(category:"general")  %></li>
-        <li><%= link_to "science",publishers_path(category:"science")  %></li>
-        <li><%= link_to "sports",publishers_path(category:"sports")  %></li>
-        <li><%= link_to "technology",publishers_path(category:"technology")  %></li>
+        <li><%= link_to "Business",publishers_path(category:"business")  %></li>
+        <li><%= link_to "Entertainment",publishers_path(category:"entertainment")  %></li>
+        <li><%= link_to "General",publishers_path(category:"general")  %></li>
+        <li><%= link_to "Science",publishers_path(category:"science")  %></li>
+        <li><%= link_to "Sports",publishers_path(category:"sports")  %></li>
+        <li><%= link_to "Technology",publishers_path(category:"technology")  %></li>
       </ul>
     </div>
   </nav>
@@ -19,9 +19,11 @@
           <div class="card blue-grey darken-1 hoverable">
             <div class="card-content ">
               <span class="card-title orange-text"><%= source.name %></span>
+              <div class="white-text">
               <p><%= source.description %></p>
               <p>Category:<%= source.category %></p>
               <p><%= link_to source.url, source.url, target: :_blank %></p>
+              </div>
               <div class="card-action">
                 <%= link_to "Headline News", show_publisher_path(sources: source.source_id) %>
               </div>
@@ -31,4 +33,7 @@
     <% end %>
   </div>
 </div>
+</div>
+<div class="pagination center-align">
+        <%= paginate @sources %>
 </div>

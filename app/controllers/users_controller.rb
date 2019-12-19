@@ -5,7 +5,8 @@
   def home
     news_api_key = ENV["NEWS_API_KEY_ID"]
     newsapi = News.new("#{news_api_key}")
-    @all_articles = newsapi.get_everything(sources: 'bbc-news',language: 'en',page: 2)
+    all_articles = newsapi.get_everything(sources: 'bbc-news',language: 'en',page: 2)
+    @all_articles = Kaminari.paginate_array(all_articles).page(params[:page]).per(8)
   end
 
   def new
@@ -41,7 +42,8 @@
           end
         end
       end
-    @vocabs = vocab_ary.sort_by{ |v| v[:english].downcase }
+    vocabs = vocab_ary.sort_by{ |vocab| vocab[:english].downcase }
+    @vocabs = Kaminari.paginate_array(vocabs).page(params[:page]).per(20)
   end
 
   def edit

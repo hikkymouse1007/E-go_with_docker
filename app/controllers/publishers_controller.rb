@@ -1,7 +1,7 @@
 class PublishersController < ApplicationController
 	def index
   	   	@category = params[:category]
-   	    @sources = Publisher.where(category:@category)
+   	    @sources = Publisher.where(category:@category).page(params[:page]).per(8)
 
 
 
