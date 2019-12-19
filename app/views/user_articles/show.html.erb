@@ -1,28 +1,37 @@
-<h3><%= @article.title %></h3>
-<p><%= @article.japanese_title %></p>
-<p><%= @article.content%></p>
-<p><%= @article.japanese_content%></p>
-<p>vacabulary</p>
-<% @words.each do |word| %>
-<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
-remote: true %>
-<% end %>
-<table class="centered">
-	<thead>
-	  <tr>
-	      <th>Word</th>
-	      <th>Meaning</th>
-	  </tr>
-	</thead>
+<div class="container">
+<div class="inner ">
+  <div class="row flex">
+	<div class="col s12 m9">
+	<h3><%= @article.title %></h3>
+	<p><%= @article.japanese_title %></p>
+	<p><%= @article.content%></p>
+	<p><%= @article.japanese_content%></p>
+	<p>vacabulary</p>
+	<% @words.each do |word| %>
+	<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
+	remote: true %>
+	<% end %>
+	</div>
+	<div class="col s12 m3">
+		<table class="centered">
+		<thead>
+		  <tr>
+		      <th>Word</th>
+		      <th>Meaning</th>
+		  </tr>
+		</thead>
 
-	<tbody>
-	  <% @vocabs.each do |vocab| %>
-	  <tr>
-	    <td><%= vocab.english %></td>
-	    <td><%= vocab.japanese %></td>
-	    <td><%= link_to  "Delete", destroy_vocab_path(user_article_id:params[:id],id: vocab.id), method: :delete, remote: true %></td>
-	  </tr>
-	  <% end %>
-	</tbody>
-</table>
-
+		<tbody>
+		  <% @vocabs.each do |vocab| %>
+		  <tr>
+		    <td><%= vocab.english %></td>
+		    <td><%= vocab.japanese %></td>
+		    <td><%= link_to  "Delete", destroy_vocab_path(user_article_id:params[:id],id: vocab.id), method: :delete, remote: true %></td>
+		  </tr>
+		  <% end %>
+		</tbody>
+	</table>
+	</div>
+  </div>
+</div>
+</div>

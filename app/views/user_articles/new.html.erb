@@ -1,8 +1,9 @@
+<div class="container">
 <%= form_with model:@article, url:user_articles_path, method: :post, local: true do |f| %>
       <%= f.label :title %>
       <%= f.text_field :title, value:@title%>
       <%= f.label :content %>
-      <%= f.text_area :content, size:"50*24" %>
+      <%= f.text_area :content %>
       <%= f.label :url%>
       <%= f.text_field :url, value:@url %>
       <%= f.label :published_at%>
@@ -11,3 +12,4 @@
       <%= f.select :category, UserArticle.categories.keys.to_a, {}, class: "browser-default" %>
       <%= f.submit "記事の登録", class: "btn" %>
 <% end %>
+</div>
