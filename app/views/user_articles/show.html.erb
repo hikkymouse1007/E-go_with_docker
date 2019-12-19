@@ -6,10 +6,10 @@
 	<p><%= @article.japanese_title %></p>
 	<p><%= @article.content%></p>
 	<p><%= @article.japanese_content%></p>
-	<p>vacabulary</p>
-	<% @words.each do |word| %>
+	<p >【vacabulary】</p>
+	<% @words.each do |word|  %>
 	<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
-	remote: true %>
+	remote: true ;%>
 	<% end %>
 	</div>
 	<div class="col s12 m3">
@@ -30,7 +30,7 @@
 		  </tr>
 		  <% end %>
 		</tbody>
-	</table>
+		</table>
 	</div>
   </div>
 </div>

@@ -1,9 +1,8 @@
-<p><%= link_to "ニュースサイトから記事を見つける",publishers_path(category: "general")%></p>
 <div class="header-content">
+  <h1 class="header-content-title">E-Go!</h1>
 </div>
 <div class="container">
 <div class="inner ">
-  <h1 class="center-align">Headline News</h1>
   <div class="row flex">
     <% @all_articles.each do |headline| %>
     <div class="col s12 m3">
@@ -13,17 +12,17 @@
         <%=  image_tag headline.urlToImage,size:"auto" %>
         </div>
         <div class="card-content white-text">
-          <p>
-             <%= headline.title %>
-             </p>
+          <p><%= headline.title %></p>
+          <p><%= headline.publishedAt%></p>
         </div>
         <% end %>
         <div class="card-action">
-          <%= link_to "このニュースを記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
+          <%= link_to "記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
         </div>
       </div>
     </div>
     <% end %>
   </div>
 </div>
+<p><%= link_to "ニュースサイトから記事を見つける",publishers_path(category: "general")%></p>
 </div>

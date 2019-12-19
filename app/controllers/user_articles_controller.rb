@@ -9,7 +9,9 @@ class UserArticlesController < ApplicationController
   def show
   	@current_user = current_user
     @article = UserArticle.find(params[:id])
-    @words = @article.content.scan(/\w+/).uniq {|word| word.downcase}
+    @words1 = @article.title.scan(/\w+/).uniq {|word| word.downcase}
+    @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
+    @words = @words1 + @words2
     @vocabs = @article.vocabs
   end
 

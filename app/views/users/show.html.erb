@@ -1,53 +1,33 @@
-</div>
+<div class="container">
+  <%= link_to "登録している単語一覧", user_words_path %>
 <div class="inner ">
   <div class="row">
-      <ul id="tabs-swipe-demo" class="tabs">
-        <li class="tab col s3"><a href="#your-article">Your Articles</a></li>
-        <li class="tab col s3"><a class="active" href="#vocabulary">Vocabularies</a></li>
-      </ul>
 
-    <div id="your-article" class="col s12 blue">
+    <div class="your-article" >
     <% @articles.each do |article| %>
-      <div class="col s12 m6">
-        <div class="card white lighten-1">
-          <div class="card-content black-text">
+      <div class="col s12 m12">
+        <div class="card blue-grey darken-1 hoverable">
+          <div class="card-content white-text">
             <span class="card-title">
               Title:<%= link_to article.title, user_article_path(id: article.id) %>
             </span>
-            <p> "Published at <%= article.published_at %></p>
-            <p>URL:<%= link_to article.url,article.url%></p>
+            <p><%= article.japanese_title%></p>
+            <p>Category:<%= article.category %></p>
+            <p> Published at <%= article.published_at %></p>
+            <p>Source:<%= link_to article.url,article.url,target: :_blank%></p>
           </div>
           <div class="card-action center-align">
-            <%= link_to  "Edit", edit_user_article_path(id:article.id) ,class: 'btn'%>
+            <div class="option">
+              <%= link_to  "Edit", edit_user_article_path(id:article.id) ,class: 'btn'%>
             <%= link_to  "Delete", user_article_path(id: article.id), method: :delete, class: 'btn' %>
+            </div>
           </div>
         </div>
       </div>
       <% end %>
     </div>
-
-    <div id="vocabulary" class="col s12 red">
-      <p>Vocabularies</p>
-      <table class="centered">
-        <thead>
-        <tr>
-            <th>Word</th>
-            <th>Meaning</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @vocabs.each do |vocab| %>
-        <tr>
-          <td><%= vocab.english %></td>
-          <td><%= vocab.japanese %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-
+    <%= paginate @articles %>
     </div>
-    <p><%= link_to "記事の新規投稿" , new_user_article_path(current_user) %></p>
   </div>
 </div>
+
