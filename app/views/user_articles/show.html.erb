@@ -1,9 +1,11 @@
 <h3><%= @article.title %></h3>
+<p><%= @article.japanese_title %></p>
 <p><%= @article.content%></p>
+<p><%= @article.japanese_content%></p>
 <p>vacabulary</p>
 <% @words.each do |word| %>
-[<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
-remote: true %>]
+<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
+remote: true %>
 <% end %>
 <table class="centered">
 	<thead>
