@@ -5,6 +5,8 @@ class CreateUserArticles < ActiveRecord::Migration[5.2]
       t.integer "category"
       t.string "title"
       t.text "content"
+      t.string "japanese_title"
+      t.text "japanese_content"
       t.text "url"
       t.string "published_at"
 

@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2019_12_17_071241) do
     t.integer "category"
     t.string "title"
     t.text "content"
+    t.string "japanese_title"
+    t.text "japanese_content"
     t.text "url"
     t.string "published_at"
     t.datetime "created_at", null: false
