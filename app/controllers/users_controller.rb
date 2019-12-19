@@ -29,6 +29,11 @@
     @articles = current_user.user_articles.page(params[:page]).per(5).order(created_at: :desc)
   end
 
+  def category
+    @category = params[:category]
+    @articles = current_user.user_articles.where(category:@category).page(params[:page]).per(5).order(created_at: :desc)
+  end
+
 
   def words
     @articles = current_user.user_articles
