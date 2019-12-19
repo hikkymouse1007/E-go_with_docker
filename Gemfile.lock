@@ -85,6 +85,8 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
+    enumerize (2.3.1)
+      activesupport (>= 3.2)
     erubi (1.9.0)
     execjs (2.7.0)
     faraday (0.17.1)
@@ -510,6 +512,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   dotenv-rails
+  enumerize
   google-cloud
   google-cloud-translate
   jbuilder (~> 2.5)

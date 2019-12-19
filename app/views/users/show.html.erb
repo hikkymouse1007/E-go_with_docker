@@ -8,16 +8,16 @@
 
   <div id="your-article" class="col s12 blue">
   <% @articles.each do |article| %>
-    <div class="col s12 m12">
-      <div class="card yellow lighten-1">
+    <div class="col s12 m6">
+      <div class="card purple lighten-1">
         <div class="card-content white-text">
-          <span class="card-title"><%= link_to  article.title, user_article_path(id: article.id) %></span>
-          <p><%= article.published_at%></p>
+          <span class="card-title"><%= link_to  "Title: #{article.title}", user_article_path(id: article.id) %></span>
+          <p><%= "Published at #{article.published_at}"%></p>
           <p>URL:<%= link_to article.url,article.url%></p>
-          <p><%= link_to  "Edit", edit_user_article_path(id:article.id) %></p>
-          <p><%= link_to  "Delete", user_article_path(id: article.id), method: :delete %></p>
         </div>
-        <div class="card-action">
+        <div class="card-action center-align">
+          <%= link_to  "Edit", edit_user_article_path(id:article.id) ,class: 'btn'%>
+          <%= link_to  "Delete", user_article_path(id: article.id), method: :delete, class: 'btn' %>
         </div>
       </div>
     </div>

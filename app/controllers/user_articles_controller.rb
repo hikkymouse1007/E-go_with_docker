@@ -4,8 +4,6 @@ class UserArticlesController < ApplicationController
 
   def index
   	 @articles = current_user.user_articles
-
-
   end
 
   def show
@@ -61,7 +59,7 @@ class UserArticlesController < ApplicationController
   	private
 
   def user_article_params
-  	params.require(:user_article).permit(:category_id,:title,:content,:url,:published_at)
+  	params.require(:user_article).permit(:category,:title,:content,:url,:published_at)
   end
 
 
