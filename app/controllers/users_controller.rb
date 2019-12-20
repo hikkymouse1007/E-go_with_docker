@@ -51,7 +51,13 @@
         end
       end
     vocabs = vocab_ary.sort_by{ |vocab| vocab[:english].downcase }
-    @vocabs = Kaminari.paginate_array(vocabs).page(params[:page]).per(20)
+
+    if params[:capital].present?
+      vocabs_capital = vocabs.select {|vocab| vocab[:english][0].include?(params[:capital])}
+      @vocabs = Kaminari.paginate_array(vocabs_capital).page(params[:page]).per(20)
+    else
+      @vocabs = Kaminari.paginate_array(vocabs).page(params[:page]).per(20)
+    end
   end
 
   def edit
@@ -83,9 +89,4 @@
                                  :password_confirmation)
   end
 
-
-  def set_feed
-    # @feed = Feed.find(params[:id])
-    @feed1 = Feed.find(1)
-  end
 end
