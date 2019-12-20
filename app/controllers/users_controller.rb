@@ -27,7 +27,12 @@
 
   def show
   	@user = User.find(params[:id])
-    @articles = current_user.user_articles.page(params[:page]).per(5).order(created_at: :desc)
+    @categories = {"Business" =>1, "Entertainment" =>2, "General" =>3, "Health" =>4, "Science" =>5, "Sports" =>6, "Technology" =>7, "Other" =>8 }
+    if params[:category].present?
+      @articles = current_user.user_articles.where(category:params[:category]).page(params[:page]).per(5).order(created_at: :desc)
+    else
+      @articles = current_user.user_articles.page(params[:page]).per(5).order(created_at: :desc)
+    end
 
   end
 
@@ -42,12 +47,10 @@
     @capitals2 = ("V".."Z").to_a
     @articles = current_user.user_articles
     vocab_ary = []
-    vocab_ary_eng = []
     @articles.each do |article|
       article.vocabs.each do |vocab|
-        unless vocab_ary_eng.include?(vocab.english)
+        unless vocab_ary.map{ |v| v[:english] }.include?(vocab.english)
           vocab_ary << vocab
-            vocab_ary_eng << vocab.english
           end
         end
       end

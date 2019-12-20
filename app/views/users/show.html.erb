@@ -2,8 +2,10 @@
   <nav>
     <div class="nav-wrapper  pink lighten-2">
       <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "All",user_path %></li>
-        <li><%= link_to "Business",user_path(category:1) %></li>
+        <li><%= link_to "All", user_path %></li>
+        <% @categories.each do |key, value| %>
+        <li><%= link_to key, user_path(category:value) %></li>
+        <% end %>
      </ul>
     </div>
 </nav>
