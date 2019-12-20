@@ -9,18 +9,20 @@
 	<p >【vacabulary】</p>
 	<% @words.each do |word|  %>
 	<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
-	remote: true ;%>
+	remote: true %>
 	<% end %>
 	</div>
 	<div class="col s12 m3">
 		<table class="centered">
-		<thead>
-		  <tr>
-		      <th>Word</th>
-		      <th>Meaning</th>
-		  </tr>
-		</thead>
-		<%= render partial: 'vocabs/index', locals: { vocabs: @vocabs } %>
+			<thead>
+			  <tr>
+			      <th>Word</th>
+			      <th>Meaning</th>
+			  </tr>
+			</thead>
+			<div id="vocabs_area_<%= @article.id %>">
+				<%= render partial: 'vocabs/index', locals: { vocabs: @vocabs } %>
+			</div>
 		</table>
 	</div>
   </div>

@@ -13,6 +13,7 @@ class UserArticlesController < ApplicationController
     @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
     @words = @words1 + @words2
     @vocabs = @article.vocabs
+    
   end
 
   def new
