@@ -20,7 +20,6 @@ class VocabsController < ApplicationController
 		 	@vocab.user_article_id = params[:user_article_id]
 	 	    @vocab.save
 	 	    @current_user = current_user
-	 	    binding.pry
 		    ###ここで@vocabsがないとmissing errorが出る
 		    # @article = UserArticle.find(params[:id])
 		    #  	    binding.pry
