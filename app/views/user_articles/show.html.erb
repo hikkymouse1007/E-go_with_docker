@@ -20,16 +20,7 @@
 		      <th>Meaning</th>
 		  </tr>
 		</thead>
-
-		<tbody>
-		  <% @vocabs.each do |vocab| %>
-		  <tr>
-		    <td><%= vocab.english %></td>
-		    <td><%= vocab.japanese %></td>
-		    <td><%= link_to  "Delete", destroy_vocab_path(user_article_id:params[:id],id: vocab.id),class: 'btn red darken-1', method: :delete, remote: true %></td>
-		  </tr>
-		  <% end %>
-		</tbody>
+		<%= render partial: 'vocabs/index', locals: { vocabs: @vocabs } %>
 		</table>
 	</div>
   </div>
