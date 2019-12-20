@@ -4,14 +4,14 @@ class UserArticlesController < ApplicationController
 
   def index
   	 @articles = current_user.user_articles
-
-
   end
 
   def show
   	@current_user = current_user
     @article = UserArticle.find(params[:id])
-    @words = @article.content.scan(/\w+/).uniq {|word| word.downcase}
+    @words1 = @article.title.scan(/\w+/).uniq {|word| word.downcase}
+    @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
+    @words = @words1 + @words2
     @vocabs = @article.vocabs
   end
 
@@ -25,7 +25,11 @@ class UserArticlesController < ApplicationController
   def create
    	@article = UserArticle.new(user_article_params) #bui]d:アソシエーションに紐づくnewメゾット
     @article.user_id = current_user.id
-
+    project_id = ENV["CLOUD_PROJECT_ID"]
+    translate   = Google::Cloud::Translate.new version: :v2, project_id: project_id
+    target = "ja"
+    @article.japanese_title = translate.translate @article.title, to: target
+    @article.japanese_content = translate.translate @article.content, to: target
  	  if @article.save
       flash[:success] = "Article created!"
       # redirect_to user_path(current_user)
@@ -42,6 +46,11 @@ class UserArticlesController < ApplicationController
 
   def update
     @article = UserArticle.find(params[:id])
+    project_id = ENV["CLOUD_PROJECT_ID"]
+    translate   = Google::Cloud::Translate.new version: :v2, project_id: project_id
+    target = "ja"
+    @article.japanese_title = translate.translate @article.title, to: target
+    @article.japanese_content = translate.translate @article.content, to: target
     if @article.update(user_article_params)
     #showへ
       redirect_to user_article_path(@article), notice: 'Article updated!'
@@ -61,7 +70,7 @@ class UserArticlesController < ApplicationController
   	private
 
   def user_article_params
-  	params.require(:user_article).permit(:category_id,:title,:content,:url,:published_at)
+  	params.require(:user_article).permit(:category,:title,:content,:url,:published_at,:japanese_title,:japanese_content)
   end
 
 

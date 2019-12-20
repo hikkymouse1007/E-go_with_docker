@@ -3,9 +3,11 @@
   before_action :correct_user,   only: [:edit, :update,:show,:destroy]
 
   def home
+    @today = Date.today
     news_api_key = ENV["NEWS_API_KEY_ID"]
     newsapi = News.new("#{news_api_key}")
-    @all_articles = newsapi.get_everything(sources: 'bbc-news',language: 'en',page: 2)
+    all_articles = newsapi.get_everything(sources: 'bbc-news',language: 'en',page: 2)
+    @all_articles = Kaminari.paginate_array(all_articles).page(params[:page]).per(8)
   end
 
   def new
@@ -25,6 +27,16 @@
 
   def show
   	@user = User.find(params[:id])
+    @articles = current_user.user_articles.page(params[:page]).per(5).order(created_at: :desc)
+  end
+
+  def category
+    @category = params[:category]
+    @articles = current_user.user_articles.where(category:@category).page(params[:page]).per(5).order(created_at: :desc)
+  end
+
+
+  def words
     @articles = current_user.user_articles
     vocab_ary = []
     vocab_ary_eng = []
@@ -36,7 +48,8 @@
           end
         end
       end
-    @vocabs = vocab_ary.sort_by{ |v| v[:english].downcase }
+    vocabs = vocab_ary.sort_by{ |vocab| vocab[:english].downcase }
+    @vocabs = Kaminari.paginate_array(vocabs).page(params[:page]).per(20)
   end
 
   def edit

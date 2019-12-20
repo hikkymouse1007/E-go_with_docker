@@ -1,9 +1,39 @@
-<p><%= @article.title %></p>
-<p><%= @article.content%></p>
-<p>vacabulary</p>
-<% @words.each do |word| %>
-<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,remote: true %>
-<% end %>
-<% @vocabs.each do |vocab| %>
-<p><%= vocab.english %><%= vocab.japanese %><%= link_to  "Delete", destroy_vocab_path(user_article_id:params[:id],id: vocab.id), method: :delete, remote: true %></p>
-<% end %>
+<div class="container">
+<div class="inner ">
+  <div class="row flex">
+	<div class="col s12 m9">
+	<h4><%= @article.title %></h4>
+	<p><%= @article.japanese_title %></p>
+	<p><%= @article.content%></p>
+	<p><%= @article.japanese_content%></p>
+	<p >【vacabulary】</p>
+	<% @words.each do |word|  %>
+	<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
+	remote: true ;%>
+	<% end %>
+	</div>
+	<div class="col s12 m3">
+		<table class="centered">
+		<thead>
+		  <tr>
+		      <th>Word</th>
+		      <th>Meaning</th>
+		  </tr>
+		</thead>
+
+		<tbody>
+		  <% @vocabs.each do |vocab| %>
+		  <tr>
+		    <td><%= vocab.english %></td>
+		    <td><%= vocab.japanese %></td>
+		    <td><%= link_to  "Delete", destroy_vocab_path(user_article_id:params[:id],id: vocab.id),class: 'btn red darken-1', method: :delete, remote: true %></td>
+		  </tr>
+		  <% end %>
+		</tbody>
+		</table>
+	</div>
+  </div>
+  <%= link_to  "記事一覧", user_path(current_user) ,class: 'btn blue lighten-2'%>
+  <%= link_to  "Delete", user_article_path(id: @article.id), method: :delete, class: 'btn red darken-1' %>
+</div>
+</div>

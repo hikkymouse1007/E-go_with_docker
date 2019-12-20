@@ -1,10 +1,7 @@
 class PublishersController < ApplicationController
 	def index
-		# news_api_key = ENV["NEWS_API_KEY_ID"]
-  #   	newsapi = News.new("#{news_api_key}")
-  #   	@category = params[:category]
   	   	@category = params[:category]
-   	    @sources = Publisher.where(category:@category)
+   	    @sources = Publisher.where(category:@category).page(params[:page]).per(8)
 
 
 

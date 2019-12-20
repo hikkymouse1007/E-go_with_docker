@@ -1,27 +1,38 @@
 <div class="header-content">
-<%= image_tag 'main-content.jpg' %>
+  <h1 class="header-content-title">E-Go!</h1>
 </div>
-<div class="inner ">
-  <div class="row flex">
-    <h3>Headline News</h3>
-    <% @all_articles.each do |headline| %>
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1 hoverable">
-        <%= link_to(headline.url,target: :_blank) do %>
-        <div class="card-image">
-        <%=  image_tag headline.urlToImage,size:"auto" %>
-        </div>
-        <div class="card-content white-text">
-          <span class="card-title">
-             <%= headline.title %></span>
-        </div>
-        <% end %>
-        <div class="card-action">
-          <%= link_to "このニュースを記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
+<div class="container">
+  <nav>
+    <div class="nav-wrapper pink lighten-2">
+      <ul id="nav-mobile" class="center hide-on-med-and-down">
+        <li><%= link_to "Headline News","#" %></li>
+        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+     </ul>
+    </div>
+</nav>
+  <p><%= @today %>の最新ニュース</p>
+  <div class="inner ">
+    <div class="row flex">
+      <% @all_articles.each do |headline| %>
+      <div class="col s12 m3">
+        <div class="card white hoverable">
+          <%= link_to(headline.url,target: :_blank) do %>
+          <div class="card-image">
+          <%=  image_tag headline.urlToImage,size:"auto" %>
+          </div>
+          <div class="card-content black-text">
+            <p><%= headline.title %></p>
+          </div>
+          <% end %>
+          <div class="card-action">
+            <%= link_to "記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
+          </div>
         </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
-    <%= link_to "ニュースサイトから記事を見つける",publishers_path(category: "general")%>
   </div>
+  </div>
+  <div  class= "center-align">
+    <%= paginate @all_articles %>
 </div>

@@ -1,6 +1,6 @@
 <div class="container">
   <nav>
-    <div class="nav-wrapper  pink lighten-2">
+    <div class="nav-wrapper pink lighten-2">
       <ul id="nav-mobile" class="center hide-on-med-and-down">
         <li><%= link_to "All",user_path %></li>
         <li><%= link_to "Business",user_category_path(category:1) %></li>
@@ -16,9 +16,9 @@
 </nav>
 <div class="inner ">
   <div class="row">
-      <div class="col s12 m8">
-        <% @articles.each do |article| %>
-        <div class="card white hoverable">
+    <% @articles.each do |article| %>
+      <div class="col s12 m12">
+        <div class="card white darken-1 hoverable">
           <div class="card-content ">
             <span class="card-title ">
               <%= article.title %>
@@ -27,26 +27,19 @@
             <p><%= article.japanese_title%></p>
             <p>Category:<%= article.category %></p>
             <p> Published at <%= article.published_at %></p>
-            <p>外部リンク:<%= link_to article.url,article.url,target: :_blank%></p>
+            <p>外部リンク:<%= link_to article.url,article.url,class: 'blue-text',target: :_blank%></p>
             </div>
           </div>
           <div class="card-action center-align">
             <div class="option">
-              <%= link_to  "Show", user_article_path(id: article.id) ,class: 'btn blue lighten-2'%>
+             <%= link_to  "Show", user_article_path(id: article.id) ,class: 'btn blue lighten-2'%>
               <%= link_to  "Edit", edit_user_article_path(id:article.id) ,class: 'btn green accent-3'%>
             <%= link_to  "Delete", user_article_path(id: article.id), method: :delete, class: 'btn red darken-1' %>
             </div>
           </div>
         </div>
-        <% end %>
       </div>
-      <div class="col s12 m4">
-
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "登録している単語一覧", user_words_path %></li>
-        <li><%= link_to "記事の新規投稿" , new_user_article_path(current_user) %></li>
-      </ul>
-      </div>
+      <% end %>
     </div>
     </div>
   </div>

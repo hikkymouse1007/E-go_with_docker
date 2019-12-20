@@ -6,8 +6,6 @@ class CreateVocabs < ActiveRecord::Migration[5.2]
       t.integer 'user_article_id'
 
       t.timestamps
-     drop_table :feeds
-     drop_table :entries
     end
   end
 end
