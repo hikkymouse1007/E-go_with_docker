@@ -3,6 +3,7 @@
   before_action :correct_user,   only: [:edit, :update,:show,:destroy]
 
   def home
+    @today = Date.today
     news_api_key = ENV["NEWS_API_KEY_ID"]
     newsapi = News.new("#{news_api_key}")
     all_articles = newsapi.get_everything(sources: 'bbc-news',language: 'en',page: 2)

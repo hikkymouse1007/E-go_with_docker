@@ -1,7 +1,7 @@
 <div class="container">
 <h1 class="center-align">Log in</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="row ">
+  <div class="col s6 m6 ">
     <%= form_with scope: :session, url:login_path, local: true do |f| %>
 
       <%= f.label :email %>
@@ -15,10 +15,10 @@
         <span>Remember me on this computer</span>
       <% end %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <p><%= f.submit "Log in", class: "btn  blue lighten-2" %></p>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p>New user? <%= link_to "Sign up now!", signup_path, class: "btn  blue lighten-2"  %></p>
   </div>
 </div>
 </div>
