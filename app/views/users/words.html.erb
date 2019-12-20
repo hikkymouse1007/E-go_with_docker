@@ -1,4 +1,22 @@
 <div class="container">
+  <nav>
+    <div class="nav-wrapper  pink lighten-2">
+      <ul id="nav-mobile" class="center hide-on-med-and-down">
+        <% @capitals1.each do |capital| %>
+        <li><%= link_to capital ,user_path %></li>
+        <% end %>
+     </ul>
+   </nav>
+     <nav>
+    <div class="nav-wrapper  pink lighten-2">
+     <ul id="nav-mobile" class="center hide-on-med-and-down">
+        <% @capitals2.each do |capital| %>
+        <li><%= link_to capital ,user_path %></li>
+        <% end %>
+     </ul>
+    </div>
+    </nav>
+
 <div class="inner ">
   <div class="row">
 	<div>

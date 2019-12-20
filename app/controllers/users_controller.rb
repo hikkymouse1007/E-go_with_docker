@@ -37,6 +37,8 @@
 
 
   def words
+    @capitals1 = ("A".."U").to_a
+    @capitals2 = ("V".."Z").to_a
     @articles = current_user.user_articles
     vocab_ary = []
     vocab_ary_eng = []
