@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get  'users/:id' => 'users#show',as:"user"
   get  'users/:id/edit' => 'users#edit',as:"edit_user"
   get  'users/:id/words' => 'users#words',as:"user_words"
-  get  'users/:id/:category' => 'users#category',as:"user_category"
   patch  'users/:id' => 'users#update',as:"update_user"
   delete 'users/:id',  to: 'users#destroy',as:"delete_user"
   ##session
