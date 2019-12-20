@@ -9,27 +9,20 @@
 	<p >【vacabulary】</p>
 	<% @words.each do |word|  %>
 	<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
-	remote: true ;%>
+	remote: true %>
 	<% end %>
 	</div>
 	<div class="col s12 m3">
 		<table class="centered">
-		<thead>
-		  <tr>
-		      <th>Word</th>
-		      <th>Meaning</th>
-		  </tr>
-		</thead>
-
-		<tbody>
-		  <% @vocabs.each do |vocab| %>
-		  <tr>
-		    <td><%= vocab.english %></td>
-		    <td><%= vocab.japanese %></td>
-		    <td><%= link_to  "Delete", destroy_vocab_path(user_article_id:params[:id],id: vocab.id),class: 'btn red darken-1', method: :delete, remote: true %></td>
-		  </tr>
-		  <% end %>
-		</tbody>
+			<thead>
+			  <tr>
+			      <th>Word</th>
+			      <th>Meaning</th>
+			  </tr>
+			</thead>
+			<div id="vocabs_area_<%= @article.id %>">
+				<%= render partial: 'vocabs/index', locals: { vocabs: @vocabs } %>
+			</div>
 		</table>
 	</div>
   </div>

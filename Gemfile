@@ -82,6 +82,7 @@ gem 'rubocop', '~> 0.77.0', require: false
 gem 'kaminari'
 
 gem "google-cloud"
+
 gem "google-cloud-translate"
 
 gem "news-api"
@@ -89,3 +90,5 @@ gem "news-api"
 gem 'dotenv-rails'
 
 gem 'enumerize'
+
+gem 'jquery-rails'
