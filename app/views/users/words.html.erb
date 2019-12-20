@@ -1,4 +1,23 @@
 <div class="container">
+  <nav>
+    <div class="nav-wrapper  pink lighten-2">
+      <ul id="nav-mobile" class="center hide-on-med-and-down">
+        <% @capitals1.each do |capital| %>
+        <li><%= link_to capital ,user_words_path(capital: capital.downcase) %></li>
+        <% end %>
+     </ul>
+   </nav>
+     <nav>
+    <div class="nav-wrapper  pink lighten-2">
+     <ul id="nav-mobile" class="center hide-on-med-and-down">
+        <% @capitals2.each do |capital| %>
+        <li><%= link_to capital ,user_words_path(capital: capital.downcase) %></li>
+        <% end %>
+        <li><%= link_to "All" ,user_words_path %></li>
+     </ul>
+    </div>
+    </nav>
+
 <div class="inner ">
   <div class="row">
 	<div>
