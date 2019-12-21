@@ -13,7 +13,6 @@ class UserArticlesController < ApplicationController
     @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
     @words = @words1 + @words2
     @vocabs = @article.vocabs
-    
   end
 
   def new
@@ -24,7 +23,7 @@ class UserArticlesController < ApplicationController
   end
 
   def create
-   	@article = UserArticle.new(user_article_params) #bui]d:アソシエーションに紐づくnewメゾット
+   	@article = UserArticle.new(user_article_params)
     @article.user_id = current_user.id
     project_id = ENV["CLOUD_PROJECT_ID"]
     translate   = Google::Cloud::Translate.new version: :v2, project_id: project_id

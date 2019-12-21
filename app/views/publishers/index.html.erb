@@ -1,39 +1,39 @@
 <div class="container">
-  <nav>
+  <div class="inner ">
+   <nav>
     <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "Business",publishers_path(category:"business")  %></li>
-        <li><%= link_to "Entertainment",publishers_path(category:"entertainment")  %></li>
-        <li><%= link_to "General",publishers_path(category:"general")  %></li>
-        <li><%= link_to "Health",publishers_path(category:"health")  %></li>
-        <li><%= link_to "Science",publishers_path(category:"science")  %></li>
-        <li><%= link_to "Sports",publishers_path(category:"sports")  %></li>
-        <li><%= link_to "Technology",publishers_path(category:"technology")  %></li>
-      </ul>
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home ",root_path %></li>
+        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+     </ul>
     </div>
   </nav>
-<h1><%= @category.capitalize %></h1>
-<div class="inner ">
-  <div class="row flex">
-    <% @sources.each do |source| %>
-        <div class="col s12 m6">
-          <div class="card white hoverable">
-            <div class="card-content ">
-              <span class="card-title orange-text"><%= source.name %></span>
-              <div class="black-text">
-              <p><%= source.description %></p>
-              <p>Category:<%= source.category %></p>
-              <p><%= link_to source.url, source.url, target: :_blank %></p>
-              </div>
-              <div class="card-action">
-                <%= link_to "Headline News", show_publisher_path(sources: source.source_id) %>
+  <%= render 'shared/link_nav' %>
+  <h1 class="center"><%= @category.capitalize %></h1>
+    <div class="inner ">
+      <div class="row flex">
+        <% @sources.each do |source| %>
+            <div class="col s12 m6">
+              <div class="card white hoverable">
+                <div class="card-content ">
+                  <span class="card-title black-text"><%= source.name %></span>
+                  <div class="black-text">
+                  <p><%= source.description %></p>
+                  <div class="chip green lighten-2">
+              <%= link_to source.category, publishers_path(category:source.category), class: "white-text"%>
+            </div>
+                  <p><%= link_to source.url, source.url, target: :_blank %></p>
+                  </div>
+                  <div class="card-action">
+                    <%= link_to "最新のニュース", show_publisher_path(sources: source.source_id), class: "blue-text" %>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-    <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 <div class="pagination center-align">
         <%= paginate @sources %>

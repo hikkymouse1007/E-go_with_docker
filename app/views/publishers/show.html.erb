@@ -1,47 +1,55 @@
 <div class="container">
-<div class="inner ">
+  <div class="inner ">
     <nav>
     <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "Business",publishers_path(category:"business")  %></li>
-        <li><%= link_to "Entertainment",publishers_path(category:"entertainment")  %></li>
-        <li><%= link_to "General",publishers_path(category:"general")  %></li>
-        <li><%= link_to "Health",publishers_path(category:"health")  %></li>
-        <li><%= link_to "Science",publishers_path(category:"science")  %></li>
-        <li><%= link_to "Sports",publishers_path(category:"sports")  %></li>
-        <li><%= link_to "Technology",publishers_path(category:"technology")  %></li>
-      </ul>
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home ",root_path %></li>
+        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+     </ul>
     </div>
   </nav>
-  <h1><%= @top_headlines[0].name %></h1>
-  <div class="row flex">
-    <div class="publisher">
-    </div>
-    <% if @top_headlines.present? %>
-      <% @top_headlines.each do |headline| %>
-        <div class="col s12 m3">
-          <div class="card white hoverable">
-            <%= link_to(headline.url,target: :_blank) do %>
-            <% if headline.urlToImage.present? %>
-              <% if headline.urlToImage.include?("jpg") || headline.urlToImage.include?("png") %>
-              <div class="card-image">
-                <%=  image_tag headline.urlToImage, size: 'auto' %>
+    <%= render 'shared/link_nav' %>
+    <h1 class="center"><%= @top_headlines[0].name %></h1>
+    <p><%= @today %></p>
+    <div class="row flex">
+      <div class="publisher">
+      </div>
+      <% if @top_headlines.present? %>
+        <% @top_headlines.each do |headline| %>
+          <div class="col s12 m3">
+            <div class="card white hoverable">
+              <a class="modal-trigger" href="#<%= headline.title %>">
+                <% if headline.urlToImage.present? %>
+                  <% if headline.urlToImage.include?("jpg") || headline.urlToImage.include?("png") %>
+                    <div class="card-image">
+                      <%=  image_tag headline.urlToImage,size:"auto" %>
+                    </div>
+                  <% end %>
+                <% end %>
+                <div class="card-content black-text">
+                  <p><%= headline.title %></p>
+                </div>
+              </a>
+              <div id="<%= headline.title %>" class="modal">
+                <div class="modal-content">
+                  <h4><%= headline.title %></h4>
+                  <p><%= headline.publishedAt %></p>
+                  <p><%= headline.description %></p>
+                  <p><%= link_to headline.url, headline.url, class: "blue-text",  target: :_blank%></p>
+                </div>
+                <div class="modal-footer">
+                  <p class="modal-close waves-effect waves-green btn-flat">Close</p>
+                </div>
               </div>
-              <% end %>
-            <% end %>
-            <div class="card-content bladk-text">
-              <p><%= headline.title %></p>
-            </div>
-            <% end %>
-            <div class="card-action">
-              <%= link_to "このニュースを記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
+              <div class="card-action">
+                <%= link_to "このニュースを記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt),class: "blue-text"  %>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
+      <% else %>
+        <p>Headline news doesn't exist here</p>
       <% end %>
-    <% else %>
-      <p>Headline news doesn't exist here</p>
-    <% end %>
+    </div>
   </div>
-</div>
 </div>

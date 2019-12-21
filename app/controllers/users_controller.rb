@@ -43,8 +43,8 @@
 
 
   def words
-    @capitals1 = ("A".."U").to_a
-    @capitals2 = ("V".."Z").to_a
+    @capitals1 = ("A".."N").to_a
+    @capitals2 = ("O".."Z").to_a
     @articles = current_user.user_articles
     vocab_ary = []
     @articles.each do |article|

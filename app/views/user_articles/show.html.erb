@@ -13,20 +13,24 @@
 	<% end %>
 	</div>
 	<div class="col s12 m3">
-		<table class="centered">
+		<table id = "vocabularies"class="centered">
 			<thead>
 			  <tr>
 			      <th>Word</th>
 			      <th>Meaning</th>
 			  </tr>
 			</thead>
-			<div id="vocabs_area_<%= @article.id %>">
-				<%= render partial: 'vocabs/index', locals: { vocabs: @vocabs } %>
-			</div>
+			<tbody>
+				 <% @vocabs.each do |vocab| %>
+					<%= render partial: 'vocabs/index', locals: { vocab: vocab } %>
+				 <% end %>
+			</tbody>
 		</table>
 	</div>
   </div>
+  <div class="center">
   <%= link_to  "記事一覧", user_path(current_user) ,class: 'btn blue lighten-2'%>
   <%= link_to  "Delete", user_article_path(id: @article.id), method: :delete, class: 'btn red darken-1' %>
+  </div>
 </div>
 </div>

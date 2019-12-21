@@ -4,35 +4,52 @@
 <div class="container">
   <nav>
     <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "Headline News","#" %></li>
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home",root_path %></li>
         <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
-     </ul>
+        <% if current_user.present? %>
+          <li><%= link_to "Vocabularies", user_words_path(current_user) %></li>
+          <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
+        <% end %>
+      </ul>
     </div>
-</nav>
-  <p><%= @today %>の最新ニュース</p>
+  </nav>
+  <h3 class="center"><%= @today %>の最新ニュース</h3>
   <div class="inner ">
     <div class="row flex">
       <% @all_articles.each do |headline| %>
       <div class="col s12 m3">
-        <div class="card white hoverable">
-          <%= link_to(headline.url,target: :_blank) do %>
-          <div class="card-image">
-          <%=  image_tag headline.urlToImage,size:"auto" %>
-          </div>
-          <div class="card-content black-text">
-            <p><%= headline.title %></p>
-          </div>
-          <% end %>
-          <div class="card-action">
-            <%= link_to "記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
+          <div class="card white hoverable">
+              <a class="modal-trigger" href="#<%= headline.title %>">
+                <div class="card-image">
+                <%=  image_tag headline.urlToImage,size:"auto" %>
+                </div>
+                <div class="card-content black-text">
+                  <p><%= headline.title %></p>
+                </div>
+              </a>
+              <div id="<%= headline.title %>" class="modal">
+                <div class="modal-content">
+                  <h4><%= headline.title %></h4>
+                  <p><%= headline.publishedAt %></p>
+                  <p><%= headline.description %></p>
+                  <p><%= link_to headline.url, headline.url,class: "blue-text" , target: :_blank %></p>
+                </div>
+                <div class="modal-footer">
+                  <p class="modal-close waves-effect waves-green btn-flat">Close</p>
+                </div>
+              </div>
+            <div class="card-action">
+            <%= link_to "記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt), class: "blue-text" %>
+            </div>
           </div>
         </div>
-      </div>
       <% end %>
-    </div>
+      </div>
   </div>
-  </div>
-  <div  class= "center-align">
-    <%= paginate @all_articles %>
 </div>
+<div  class= "center-align">
+  <%= paginate @all_articles %>
+</div>
+
+

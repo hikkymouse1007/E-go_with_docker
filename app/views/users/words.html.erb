@@ -1,28 +1,38 @@
 <div class="container">
   <nav>
-    <div class="nav-wrapper  pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
+    <div class="nav-wrapper pink lighten-2">
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home",root_path %></li>
+        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+        <li><%= link_to "Vocabularies", user_words_path %></li>
+        <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
+      </ul>
+    </div>
+  </nav>
+  <nav>
+    <div class="nav-wrapper  green lighten-2 ">
+      <ul id="nav-mobile" class="list-center hide-on-med-and-down">
         <% @capitals1.each do |capital| %>
         <li><%= link_to capital ,user_words_path(capital: capital.downcase) %></li>
         <% end %>
      </ul>
-   </nav>
-     <nav>
-    <div class="nav-wrapper  pink lighten-2">
-     <ul id="nav-mobile" class="center hide-on-med-and-down">
+    </div>
+  </nav>
+  <nav>
+    <div class="nav-wrapper  green lighten-2">
+     <ul id="nav-mobile" class="list-center hide-on-med-and-down">
         <% @capitals2.each do |capital| %>
         <li><%= link_to capital ,user_words_path(capital: capital.downcase) %></li>
         <% end %>
         <li><%= link_to "All" ,user_words_path %></li>
      </ul>
     </div>
-    </nav>
+  </nav>
 
 <div class="inner ">
   <div class="row">
-	<div>
 	<div class="your-vocabulary col s12">
-      <p>Vocabularies</p>
+      <h3 class="center-align">Vocabularies</h3>
       <table class="centered">
         <thead>
         <tr>
@@ -40,9 +50,6 @@
         <% end %>
       </tbody>
     </table>
-
-
-    </div>
     </div>
   </div>
 </div>

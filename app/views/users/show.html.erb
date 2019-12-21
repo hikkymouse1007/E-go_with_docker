@@ -1,7 +1,17 @@
 <div class="container">
   <nav>
-    <div class="nav-wrapper  pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
+    <div class="nav-wrapper pink lighten-2">
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home",root_path %></li>
+        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+        <li><%= link_to "Vocabularies", user_words_path %></li>
+        <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
+      </ul>
+    </div>
+  </nav>
+  <nav>
+    <div class="nav-wrapper  green lighten-2">
+      <ul id="nav-mobile" class="list-center hide-on-med-and-down">
         <li><%= link_to "All", user_path %></li>
         <% @categories.each do |key, value| %>
         <li><%= link_to key, user_path(category:value) %></li>
@@ -11,7 +21,8 @@
 </nav>
 <div class="inner ">
   <div class="row">
-      <div class="col s12 m8">
+    <h1 class="center">My Page</h1>
+      <div class="col s12 m12">
         <% @articles.each do |article| %>
         <div class="card white hoverable">
           <div class="card-content ">
@@ -20,9 +31,11 @@
             </span>
             <div class="content black-text">
             <p><%= article.japanese_title%></p>
-            <p>Category:<%= article.category %></p>
             <p> Published at <%= article.published_at %></p>
-            <p>外部リンク:<%= link_to article.url,article.url,target: :_blank%></p>
+            <p><%= link_to article.url,article.url,class: "blue-text" ,target: :_blank%></p>
+            </div>
+            <div class="chip green lighten-2">
+              <%= link_to article.category, user_path(category:article.category), class: "white-text"%>
             </div>
           </div>
           <div class="card-action center-align">
@@ -35,16 +48,9 @@
         </div>
         <% end %>
       </div>
-      <div class="col s12 m4">
-
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "登録している単語一覧", user_words_path %></li>
-        <li><%= link_to "記事の新規投稿" , new_user_article_path(current_user) %></li>
-      </ul>
-      </div>
     </div>
     </div>
-  </div>
+</div>
 <div class="pagination center-align">
   <%= paginate @articles %>
 </div>
