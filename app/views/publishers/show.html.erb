@@ -23,7 +23,7 @@
           <div class="card white hoverable">
             <%= link_to(headline.url,target: :_blank) do %>
             <% if headline.urlToImage.present? %>
-              <% if headline.urlToImage.include?("jpg") %>
+              <% if headline.urlToImage.include?("jpg") || headline.urlToImage.include?("png") %>
               <div class="card-image">
                 <%=  image_tag headline.urlToImage, size: 'auto' %>
               </div>
