@@ -7,7 +7,11 @@
       <ul id="nav-mobile" class="hide-on-med-and-down list-center">
         <li><%= link_to "Home",root_path %></li>
         <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
-     </ul>
+        <% if current_user.present? %>
+          <li><%= link_to "Vocabularies", user_words_path(current_user) %></li>
+          <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
+        <% end %>
+      </ul>
     </div>
   </nav>
   <h3 class="center"><%= @today %>の最新ニュース</h3>
@@ -29,14 +33,14 @@
                   <h4><%= headline.title %></h4>
                   <p><%= headline.publishedAt %></p>
                   <p><%= headline.description %></p>
-                  <p>外部リンク:<%= link_to headline.url, headline.url, target: :_blank %></p>
+                  <p><%= link_to headline.url, headline.url,class: "blue-text" , target: :_blank %></p>
                 </div>
-                  <div class="modal-footer">
-                <p class="modal-close waves-effect waves-green btn-flat">Close</p>
-              </div>
+                <div class="modal-footer">
+                  <p class="modal-close waves-effect waves-green btn-flat">Close</p>
+                </div>
               </div>
             <div class="card-action">
-            <%= link_to "記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
+            <%= link_to "記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt), class: "blue-text" %>
             </div>
           </div>
         </div>
