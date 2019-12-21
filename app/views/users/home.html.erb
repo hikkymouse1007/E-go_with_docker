@@ -4,13 +4,13 @@
 <div class="container">
   <nav>
     <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "Headline News","#" %></li>
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home",root_path %></li>
         <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
      </ul>
     </div>
-</nav>
-  <p><%= @today %>の最新ニュース</p>
+  </nav>
+  <h3 class="center"><%= @today %>の最新ニュース</h3>
   <div class="inner ">
     <div class="row flex">
       <% @all_articles.each do |headline| %>

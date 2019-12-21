@@ -1,19 +1,8 @@
 <div class="container">
 <div class="inner ">
-    <nav>
-    <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "Business",publishers_path(category:"business")  %></li>
-        <li><%= link_to "Entertainment",publishers_path(category:"entertainment")  %></li>
-        <li><%= link_to "General",publishers_path(category:"general")  %></li>
-        <li><%= link_to "Health",publishers_path(category:"health")  %></li>
-        <li><%= link_to "Science",publishers_path(category:"science")  %></li>
-        <li><%= link_to "Sports",publishers_path(category:"sports")  %></li>
-        <li><%= link_to "Technology",publishers_path(category:"technology")  %></li>
-      </ul>
-    </div>
-  </nav>
-  <h1><%= @top_headlines[0].name %></h1>
+    <%= render 'shared/link_nav' %>
+    <h1 class="center"><%= @top_headlines[0].name %></h1>
+    <p><%= @today %></p>
   <div class="row flex">
     <div class="publisher">
     </div>

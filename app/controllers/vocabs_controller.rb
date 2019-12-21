@@ -19,11 +19,6 @@ class VocabsController < ApplicationController
 		 	@vocab.english = @english
 		 	@vocab.user_article_id = params[:user_article_id]
 	 	    @vocab.save
-	 	    @current_user = current_user
-		    ###ここで@vocabsがないとmissing errorが出る
-		    # @article = UserArticle.find(params[:id])
-		    #  	    binding.pry
-		    # @vocabs = @article.vocabs
 
 
 	 	else
@@ -35,5 +30,6 @@ class VocabsController < ApplicationController
 	def destroy
 		vocab = Vocab.find(params[:id])
         vocab.destroy
+        redirect_to user_article_path(params[:user_article_id])
 	end
 end

@@ -1,1 +1,1 @@
-$('#vocabs_area_<%= @article.id %>').html("<%= j(render partial: 'vocabs/index', locals: {vocabs: @vocabs}) %>");
+$('#vocabularies tbody').append("<%= j(render partial: 'vocabs/index', locals: {vocab: @vocab}) %>");

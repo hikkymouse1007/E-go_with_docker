@@ -1,18 +1,15 @@
 <div class="container">
-  <nav>
+  <div class="inner ">
+      <nav>
     <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><%= link_to "Business",publishers_path(category:"business")  %></li>
-        <li><%= link_to "Entertainment",publishers_path(category:"entertainment")  %></li>
-        <li><%= link_to "General",publishers_path(category:"general")  %></li>
-        <li><%= link_to "Health",publishers_path(category:"health")  %></li>
-        <li><%= link_to "Science",publishers_path(category:"science")  %></li>
-        <li><%= link_to "Sports",publishers_path(category:"sports")  %></li>
-        <li><%= link_to "Technology",publishers_path(category:"technology")  %></li>
-      </ul>
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home ",root_path %></li>
+        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+     </ul>
     </div>
   </nav>
-<h1><%= @category.capitalize %></h1>
+  <%= render 'shared/link_nav' %>
+<h1 class="center"><%= @category.capitalize %></h1>
 <div class="inner ">
   <div class="row flex">
     <% @sources.each do |source| %>
@@ -33,6 +30,7 @@
         </div>
     <% end %>
   </div>
+</div>
 </div>
 </div>
 <div class="pagination center-align">

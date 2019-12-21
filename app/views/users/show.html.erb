@@ -1,7 +1,15 @@
 <div class="container">
   <nav>
+    <div class="nav-wrapper pink lighten-2">
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+        <li><%= link_to "Home",root_path %></li>
+        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+     </ul>
+    </div>
+  </nav>
+  <nav>
     <div class="nav-wrapper  pink lighten-2">
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
+      <ul id="nav-mobile" class="list-center hide-on-med-and-down">
         <li><%= link_to "All", user_path %></li>
         <% @categories.each do |key, value| %>
         <li><%= link_to key, user_path(category:value) %></li>
@@ -11,6 +19,7 @@
 </nav>
 <div class="inner ">
   <div class="row">
+    <h1 class="center">My Page</h1>
       <div class="col s12 m8">
         <% @articles.each do |article| %>
         <div class="card white hoverable">
