@@ -92,3 +92,4 @@ gem 'dotenv-rails'
 gem 'enumerize'
 
 gem 'jquery-rails'
+

@@ -13,6 +13,10 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 //= require materialize
+
+$(function(){
+    $('.modal').modal();
+    $('.modal-close').close();
+});

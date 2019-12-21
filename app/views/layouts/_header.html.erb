@@ -6,7 +6,7 @@
         <li><%= @current_user.email %></li>
         <li><a href="#">About</a></li>
         <li><%= link_to "MyArticles", user_path(current_user) %></li>
-         <li class='dropdown-trigger' data-target='dropdown1'>Option</li>
+        <li class='dropdown-trigger' data-target='dropdown1'>Option</li>
            <ul id='dropdown1' class='dropdown-content'>
             <li><%= link_to "Create New Article", logout_path, method: :delete %></li>
             <li><%= link_to "Logout", logout_path, method: :delete %></li>
@@ -20,5 +20,5 @@
       </ul>
     </div>
   </nav>
-  <script>  $('.dropdown-trigger').dropdown();</script>
+  <script>$('.dropdown-trigger').dropdown();</script>
 

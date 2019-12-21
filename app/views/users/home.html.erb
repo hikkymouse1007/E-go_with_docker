@@ -15,39 +15,37 @@
     <div class="row flex">
       <% @all_articles.each do |headline| %>
       <div class="col s12 m3">
-        <div class="card white hoverable">
-          <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><%= headline.title %></a>
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
-          </div>
-          <%= link_to(headline.url,target: :_blank) do %>
-          <div class="card-image">
-          <%=  image_tag headline.urlToImage,size:"auto" %>
-          </div>
-          <div class="card-content black-text">
-            <p><%= headline.title %></p>
-          </div>
-          <% end %>
-          <div class="card-action">
+          <div class="card white hoverable">
+              <a class="modal-trigger" href="#<%= headline.title %>">
+                <div class="card-image">
+                <%=  image_tag headline.urlToImage,size:"auto" %>
+                </div>
+                <div class="card-content black-text">
+                  <p><%= headline.title %></p>
+                </div>
+              </a>
+              <div id="<%= headline.title %>" class="modal">
+                <div class="modal-content">
+                  <h4><%= headline.title %></h4>
+                  <p><%= headline.publishedAt %></p>
+                  <p><%= headline.description %></p>
+                  <p>外部リンク:<%= link_to headline.url, headline.url, target: :_blank %></p>
+                </div>
+                  <div class="modal-footer">
+                <p class="modal-close waves-effect waves-green btn-flat">Close</p>
+              </div>
+              </div>
+            <div class="card-action">
             <%= link_to "記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt) %>
+            </div>
           </div>
         </div>
-      </div>
       <% end %>
-    </div>
+      </div>
   </div>
 </div>
-  <div  class= "center-align">
-    <%= paginate @all_articles %>
+<div  class= "center-align">
+  <%= paginate @all_articles %>
 </div>
 
 
-<script>$(document).ready(function(){
-    $('.modal').modal();
-  });</script>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   root 'users#home'
+  get  'about', to: 'users#about'
   get  'signup' => 'users#new',as:"signup"
   post 'signup' => 'users#create',as:"create_user"
   get  'users/:id' => 'users#show',as:"user"
@@ -16,5 +17,4 @@ Rails.application.routes.draw do
   resources :user_articles
   post 'user_articles/:id', to: 'vocabs#create',as: 'create_vocab'
   delete 'user_articles', to: 'vocabs#destroy',as: 'destroy_vocab'
-
 end
