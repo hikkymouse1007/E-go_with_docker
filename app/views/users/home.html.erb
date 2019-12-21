@@ -16,6 +16,16 @@
       <% @all_articles.each do |headline| %>
       <div class="col s12 m3">
         <div class="card white hoverable">
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><%= headline.title %></a>
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Modal Header</h4>
+              <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+          </div>
           <%= link_to(headline.url,target: :_blank) do %>
           <div class="card-image">
           <%=  image_tag headline.urlToImage,size:"auto" %>
@@ -32,7 +42,12 @@
       <% end %>
     </div>
   </div>
-  </div>
+</div>
   <div  class= "center-align">
     <%= paginate @all_articles %>
 </div>
+
+
+<script>$(document).ready(function(){
+    $('.modal').modal();
+  });</script>

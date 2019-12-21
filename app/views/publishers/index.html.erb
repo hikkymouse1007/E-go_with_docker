@@ -1,6 +1,6 @@
 <div class="container">
   <div class="inner ">
-      <nav>
+   <nav>
     <div class="nav-wrapper pink lighten-2">
       <ul id="nav-mobile" class="hide-on-med-and-down list-center">
         <li><%= link_to "Home ",root_path %></li>
@@ -9,29 +9,29 @@
     </div>
   </nav>
   <%= render 'shared/link_nav' %>
-<h1 class="center"><%= @category.capitalize %></h1>
-<div class="inner ">
-  <div class="row flex">
-    <% @sources.each do |source| %>
-        <div class="col s12 m6">
-          <div class="card white hoverable">
-            <div class="card-content ">
-              <span class="card-title orange-text"><%= source.name %></span>
-              <div class="black-text">
-              <p><%= source.description %></p>
-              <p>Category:<%= source.category %></p>
-              <p><%= link_to source.url, source.url, target: :_blank %></p>
-              </div>
-              <div class="card-action">
-                <%= link_to "Headline News", show_publisher_path(sources: source.source_id) %>
+  <h1 class="center"><%= @category.capitalize %></h1>
+    <div class="inner ">
+      <div class="row flex">
+        <% @sources.each do |source| %>
+            <div class="col s12 m6">
+              <div class="card white hoverable">
+                <div class="card-content ">
+                  <span class="card-title orange-text"><%= source.name %></span>
+                  <div class="black-text">
+                  <p><%= source.description %></p>
+                  <p>Category:<%= source.category %></p>
+                  <p><%= link_to source.url, source.url, target: :_blank %></p>
+                  </div>
+                  <div class="card-action">
+                    <%= link_to "Headline News", show_publisher_path(sources: source.source_id) %>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-    <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>
 <div class="pagination center-align">
         <%= paginate @sources %>
