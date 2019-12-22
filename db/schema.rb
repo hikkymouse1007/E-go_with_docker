@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 2019_12_17_071241) do
   create_table "publishers", force: :cascade do |t|
     t.string "source_id"
     t.string "name"
-    t.string "description"
-    t.string "url"
+    t.text "description"
+    t.text "url"
     t.string "category"
     t.string "language"
     t.string "country"
