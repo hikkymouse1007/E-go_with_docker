@@ -45,7 +45,7 @@
   def words
     @capitals1 = ("A".."N").to_a
     @capitals2 = ("O".."Z").to_a
-    @articles = current_user.user_articles
+    @articles = current_user.user_articles.includes(:vocabs)
     vocab_ary = []
     @articles.each do |article|
       article.vocabs.each do |vocab|
