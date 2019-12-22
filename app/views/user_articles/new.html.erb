@@ -1,15 +1,24 @@
 <div class="container">
-<%= form_with model:@article, url:user_articles_path, method: :post, local: true do |f| %>
+  <div class="row flex">
+    <div class="col s12 m6">
+      <h1>NewPost</h1>
+      <%= form_with model:@article, url:user_articles_path, method: :post, local: true do |f| %>
       <%= f.label :title %>
       <%= f.text_field :title, value:@title%>
-      <%= f.label :content %>
-      <%= f.text_area :content %>
+      <div class="form-control">
+            <%= f.label :content %>
+            <%= f.text_area :content,:size=>"60x10" %>
+      </div>
       <%= f.label :url%>
       <%= f.text_field :url, value:@url %>
       <%= f.label :published_at%>
       <%= f.text_field :published_at, value:@published_at %>
       <%= f.label :category %>
       <%= f.select :category, UserArticle.categories.keys.to_a, {}, class: "browser-default" %>
-      <%= f.submit "記事の登録", class: "btn" %>
-<% end %>
+      <div class="button center">
+      <%= f.submit "記事の登録", class: "btn blue lighten-2" %>
+      </div>
+      <% end %>
+      </div>
+  </div>
 </div>
