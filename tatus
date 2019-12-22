@@ -1,0 +1,974 @@
+[33mcommit 31d780f47f138feea1f074d5a29ddef343556d5b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 22 18:09:39 2019 +0900
+
+     change publishers table
+
+[33mcommit e37d0272e5a2b13825fb349cd5948a2391120a6c[m
+Merge: dc91ac19 6a21b2d7
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sun Dec 22 14:55:46 2019 +0900
+
+    Merge pull request #57 from hikkymouse1007/#56
+    
+    #56
+
+[33mcommit 6a21b2d748dc036f56ac8a8086be3c3dbd807e4e[m[33m ([m[1;31morigin/#56[m[33m, [m[1;32m#56[m[33m)[m
+Author: hikkymouse1007 <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 22 14:18:28 2019 +0900
+
+    #56 wip
+
+[33mcommit b4e64eb28af495a24e515cfac5b5d69b1ae726c4[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 22 13:19:58 2019 +0900
+
+     #56 activate flex-box
+
+[33mcommit 908cc9599bee6e6b1647d18e99a3a4a74c9f9bb1[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 22 12:44:19 2019 +0900
+
+    #56 first commit
+
+[33mcommit dc91ac19f51712df9f20776d7fbb6e28fe51b9c5[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 22 12:33:00 2019 +0900
+
+     remove destroy.js file
+
+[33mcommit e0d6e7f9ebd20b6745cb4e0177b76c10a32e9d1a[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 22 12:21:25 2019 +0900
+
+     remove enumerize gem
+
+[33mcommit fa368284be449fc2a9bdc2d53cf1f5b35782102b[m
+Merge: 7f0556bb cc777757
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sat Dec 21 21:56:49 2019 +0900
+
+    Merge pull request #55 from hikkymouse1007/#52
+    
+    #52
+
+[33mcommit cc7777571116196ffe96467f08eff45fd4b02658[m[33m ([m[1;31morigin/#52[m[33m, [m[1;32m#52[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 21 21:29:30 2019 +0900
+
+     #52 finish issue #52
+
+[33mcommit d5c20ea17f319a57c63dfebeebc072a468550814[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 21 20:16:28 2019 +0900
+
+     #52 remove turbolinks
+
+[33mcommit b327a7ed4bd27cfc9fc86abd0f62268a7c8770f8[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 21 16:20:07 2019 +0900
+
+     #52 add about view
+
+[33mcommit 045f9d75512bb10cfed7a6048ff91414df126ed5[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 21 14:24:31 2019 +0900
+
+     #52 activate create_ajax
+
+[33mcommit 402c2fd2c4fddd5c9967befab67f8e98b201094d[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 21 12:19:17 2019 +0900
+
+    #52 first commit
+
+[33mcommit 7f0556bbde4c9e3f6adb87f19c1c80356b73eb92[m
+Merge: 336b7f9b f2ea66e2
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sat Dec 21 12:13:19 2019 +0900
+
+    Merge pull request #54 from hikkymouse1007/#53
+    
+    #53
+
+[33mcommit f2ea66e23d4047ea9110752a34ddf787d28ac867[m[33m ([m[1;31morigin/#53[m[33m, [m[1;32m#53[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 21 12:11:46 2019 +0900
+
+     #53 update headline news and finish issue #53
+
+[33mcommit d7300cd2ced224524e6a4f8ffde50c3a8c0a56f1[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 21 11:36:54 2019 +0900
+
+    #53 first commit
+
+[33mcommit 336b7f9b768059b89930c9188c3881b8a2dfdadb[m
+Merge: 84bf9644 9c4e33a8
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Fri Dec 20 23:19:11 2019 +0900
+
+    Merge pull request #51 from hikkymouse1007/#50
+    
+    #50
+
+[33mcommit 9c4e33a8062a981cf2f48afb8fd17a5d62d6567b[m[33m ([m[1;31morigin/#50[m[33m, [m[1;32m#50[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 23:17:15 2019 +0900
+
+     #50 finish issue #50
+
+[33mcommit 345fec07d1c553b7df8cbe861c8e16d36d5f97c3[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 21:58:33 2019 +0900
+
+     #50 remove users/category.html.erb
+
+[33mcommit 70386d5945b997ddc13803d9a2774c26a26b8619[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 21:51:55 2019 +0900
+
+    #50 first commit
+
+[33mcommit 84bf9644f1204d629f8435fe5f5b0274027f6547[m
+Merge: 115c4826 4b12d49f
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Fri Dec 20 21:38:04 2019 +0900
+
+    Merge pull request #49 from hikkymouse1007/#44
+    
+    #44
+
+[33mcommit 4b12d49f791dcceabbd8719787f184f0e8b1e801[m[33m ([m[1;31morigin/#44[m[33m, [m[1;32m#44[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 21:32:35 2019 +0900
+
+     #44 finish issue #44
+
+[33mcommit d3077ac8c3fc4675f60f9e5b3b8369276cd357ab[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 20:28:30 2019 +0900
+
+     #44 add capital letters in user#words
+
+[33mcommit f7ba86778b3eb761b8226df9bc899eea41917b60[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 20:27:38 2019 +0900
+
+    #44 first commit
+
+[33mcommit 115c48266c2fdd1d27e02f5a502ee799a030d38d[m
+Merge: 946aaf6a 1b516e8a
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Fri Dec 20 19:45:07 2019 +0900
+
+    Merge pull request #48 from hikkymouse1007/#47
+    
+    #47
+
+[33mcommit 1b516e8ad6071f7120c8b057291f774f4bbd2fe7[m[33m ([m[1;31morigin/#47[m[33m, [m[1;32m#47[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 17:37:44 2019 +0900
+
+     #47 drop this issue
+
+[33mcommit 2d87dc6d9d572178f0fb0972a247cd3a2c74500c[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 14:37:20 2019 +0900
+
+     #47 add vocabs/_index.html.erb partial
+
+[33mcommit 946aaf6a73110b14d5c424998a8ecd866a19d5e2[m
+Merge: cf42ea18 b4e6a31d
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Fri Dec 20 14:31:33 2019 +0900
+
+    Merge pull request #46 from hikkymouse1007/dependabot/bundler/rack-2.0.8
+    
+    Bump rack from 2.0.7 to 2.0.8
+
+[33mcommit 8278a1e71ee776acf3a7c3d76df26fd1bba9ca70[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 14:30:39 2019 +0900
+
+    #47 first commit
+
+[33mcommit b4e6a31d26b407be3045b372d6d41dd122c04dc7[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Fri Dec 20 05:13:08 2019 +0000
+
+    Bump rack from 2.0.7 to 2.0.8
+    
+    Bumps [rack](https://github.com/rack/rack) from 2.0.7 to 2.0.8.
+    - [Release notes](https://github.com/rack/rack/releases)
+    - [Changelog](https://github.com/rack/rack/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/rack/rack/compare/2.0.7...2.0.8)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+[33mcommit cf42ea18a9d6b258a252121dc9b3391bccd91c38[m
+Merge: 2360883b ef712bcc
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Fri Dec 20 14:12:37 2019 +0900
+
+    Merge pull request #45 from hikkymouse1007/#31
+    
+    #31
+
+[33mcommit ef712bcc83099333c021ce87530407c5880943ec[m[33m ([m[1;31morigin/#31[m[33m, [m[1;32m#31[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 20 14:10:11 2019 +0900
+
+     #31 finish isseu #31
+
+[33mcommit b4b6de0f1b9ec6691a53a28107013c0dd4b79eb2[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 19 21:55:29 2019 +0900
+
+    add category_path
+
+[33mcommit dcbd730066a3c2304dec68baf7a102fa0efca556[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 19 21:35:51 2019 +0900
+
+     #31 add users#category
+
+[33mcommit 1e6cbc0d93c487733804fefeb1828ab1abd5207f[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 19 19:31:05 2019 +0900
+
+    #31 add words view
+
+[33mcommit 823f4b67140f9af19fd52b3d7f6e13a02413ee53[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 19 15:55:54 2019 +0900
+
+     #31 add background-image
+
+[33mcommit 9694827f95c1f731d50ace1be1a8eed7962bdc3b[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 19 13:48:16 2019 +0900
+
+     #31 update user_article#show and update
+
+[33mcommit 847f49863c0892a3863cd9b2fb793632547a89de[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 19 13:24:52 2019 +0900
+
+     #31 add japanese_title and japanese_content  columns
+
+[33mcommit 680ee844b0a89d8028c078d738e6104a637481bf[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 19 13:04:35 2019 +0900
+
+     #31 add selectbox
+
+[33mcommit efea3f75e9d4110756f792b38e2e4a6efc2ae5c2[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 18 17:38:05 2019 +0900
+
+     #31 remove category model
+
+[33mcommit cc8e876e8e75a64729d6caf3ceb05a6a1af60564[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 18 12:07:20 2019 +0900
+
+    #31 first commit
+
+[33mcommit 2360883b55041e8a64c84af81ce7e87a30aa3807[m
+Merge: a35df84a 5da4b555
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Tue Dec 17 19:21:39 2019 +0900
+
+    Merge pull request #40 from hikkymouse1007/#39
+    
+    #39
+
+[33mcommit 5da4b55522a487c39435563e50e943ff71dfba8c[m[33m ([m[1;31morigin/#39[m[33m, [m[1;32m#39[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 19:12:57 2019 +0900
+
+    #39 remove api-key info
+
+[33mcommit 950c0156b7c6ef6a36daf726cf58fdcf56c6377b[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 19:09:15 2019 +0900
+
+     #39 finish issue #39
+     headlineのクエリ文字?sources=にsourcesのidを
+     urlからparamsで渡すことで解決した
+
+[33mcommit 32c54ae025d9c5d6c3010a7a52e8244f99e8a93a[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 17:26:23 2019 +0900
+
+    #39 update seed.rb
+
+[33mcommit 29309bb1a8e5b78240a16e99fced4bea16233316[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 17:20:38 2019 +0900
+
+     #39 update seed.rb APIからjson取得
+
+[33mcommit 9ab4d98df4b83ade482ca6773a76338b977bad61[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 16:30:42 2019 +0900
+
+    #39 update json file's name publisher.jsonに変更
+
+[33mcommit 5203e50a5127f778bd227ab84066257f83c81935[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 16:23:18 2019 +0900
+
+    #39 migrate Publisher model
+
+[33mcommit 7a877ce238a30df1c2242c090685cb9a93fc9d5b[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 16:07:46 2019 +0900
+
+    #39 add news-api.json ニュースサイトのソース
+
+[33mcommit 3379e4243974d4885ff5d71f28da7a7b01a2edcc[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 15:51:47 2019 +0900
+
+    #39 first commit
+
+[33mcommit a35df84a5e7899f354f0de81df1f294e9702fd6a[m
+Merge: e166a70a fa8c1dfa
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Tue Dec 17 12:32:20 2019 +0900
+
+    Merge pull request #37 from hikkymouse1007/#36
+    
+    #36
+
+[33mcommit fa8c1dfaab6300240d78b69b09adcc44f562c39d[m[33m ([m[1;31morigin/#36[m[33m, [m[1;32m#36[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 12:28:38 2019 +0900
+
+    #36 finish issue #36
+
+[33mcommit 259b3ec2adfb0dde0f5a77be2ab067f4db6c7119[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 17 00:16:35 2019 +0900
+
+    #36 update home view
+
+[33mcommit f29f87bde7f4f1f772ca55382f676ca2913ec00f[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 21:12:55 2019 +0900
+
+     #36 remove users#index view publishers#indexへ移行
+
+[33mcommit 4806b208fe595db4cb1e49194fa0723c38ca1727[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 20:49:30 2019 +0900
+
+     #36 add publishers controller
+
+[33mcommit 680a2a56037aacfe0f96b86ae9b2cdbce8c42830[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 20:46:37 2019 +0900
+
+    #36 first commit
+
+[33mcommit e166a70ab9882919dfa2aa0c97e3c0c538eea36e[m
+Merge: 06627663 1b96435c
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Mon Dec 16 20:24:13 2019 +0900
+
+    Merge pull request #35 from hikkymouse1007/#33
+    
+    #33
+
+[33mcommit 1b96435cb661e33ba7b5af077ba8a6f77c77bc51[m[33m ([m[1;31morigin/#33[m[33m, [m[1;32m#33[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 20:20:13 2019 +0900
+
+     #33 finish issue #33
+         jsonからcategory取得して分類
+
+[33mcommit faaca35e245c43b41624c574cbf96c1197bf2731[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 17:44:50 2019 +0900
+
+     #33 add user_article#update action
+
+[33mcommit de3a2d303a91c523d78aed67a7c7d4708fc4e6a9[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 16:50:52 2019 +0900
+
+     #33 update home view and user_articles_controller
+    パラメータ渡して初期値化
+
+[33mcommit cdb5c9c6a3d54a24c46d4fb09649094b9e948956[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 12:26:38 2019 +0900
+
+      #33 update home view
+      home画面のUXを向上
+
+[33mcommit 6821247570c10f45391a6a397bb707f4283b6fe2[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 12:24:30 2019 +0900
+
+    #33 first commit
+
+[33mcommit 066276638f188034fe915eb172fd3470eb41eb0c[m
+Merge: 20db2059 78bfd56f
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Mon Dec 16 12:20:38 2019 +0900
+
+    Merge pull request #34 from hikkymouse1007/#30
+    
+    #30
+
+[33mcommit 78bfd56f1c254216c453c53f2085bc2fa08adb45[m[33m ([m[1;31morigin/#30[m[33m, [m[1;32m#30[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 12:17:34 2019 +0900
+
+    #30 finish issue #30
+
+[33mcommit 3bbd83e30fcf417035621b853d4d4a9d9827f422[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 16 11:31:07 2019 +0900
+
+    #30 update user#show action 単語アルファベット順表示
+
+[33mcommit 9f76a51850dd6cae92dc49b7d325ff3f079beb19[m
+Author: hikkymouse1007 <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 21:57:29 2019 +0900
+
+    #30 update user#show 単語単一表示機能実装
+
+[33mcommit 44713e8dbcb23f73208336c2b505cc6f24269a11[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 20:06:10 2019 +0900
+
+    #30 first commit
+
+[33mcommit 20db205962ed4c0ea0b3f347b40e4d5e5e640074[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 19:04:26 2019 +0900
+
+    remove feed and entry models
+
+[33mcommit 316c7768230b9d90631a40a92a8da38472c28956[m
+Merge: 12b1c1a0 b62b8663
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sun Dec 15 17:37:41 2019 +0900
+
+    Merge pull request #28 from hikkymouse1007/#27
+    
+    #27
+
+[33mcommit b62b8663d43b636c9520f6f55108bfb59e223e35[m[33m ([m[1;31morigin/#27[m[33m, [m[1;32m#27[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 17:36:26 2019 +0900
+
+    #27 finish issue #27
+
+[33mcommit 69cbd92e53c5d6c24ac767835e170cf0e32878a7[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 17:16:27 2019 +0900
+
+    add image_tag
+
+[33mcommit db961782ae02ad42388492fa224d262a91c82a6c[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 16:54:06 2019 +0900
+
+    #27 add user#index ニュースサイト一覧
+
+[33mcommit 9b5e95b25e01008a70e8050006ec5f98904af4d9[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 16:14:02 2019 +0900
+
+    #27 change user#home 公式のソースコードにアップデート
+
+[33mcommit 019470ec9fc71b0f5d4a020e0b8e5c47e073c449[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 14:11:08 2019 +0900
+
+    #27 add .env files .gitignore済
+
+[33mcommit b81e08c09e64f7ad6ef8aa4a0c5f5405e2b9c92a[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 14:03:10 2019 +0900
+
+    #27 add dotenv-rails  gem
+
+[33mcommit 39e3a2c7af59e7e92d1a6590f5319a8b72fa20f2[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 14:01:58 2019 +0900
+
+    #27 remove feedjira,seed-fu,hhtparty gems
+
+[33mcommit 8bf1275354197be6df2021ba2f1a4de868624d28[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 15 14:00:59 2019 +0900
+
+    #27 remove feed and entry model
+
+[33mcommit 0a41332b66b9a31f7125c1f3b67cbc3709eded89[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 21:25:18 2019 +0900
+
+     #27 add news-api gem
+
+[33mcommit 12d41905f9c8b4ea9b4406e5694556af83c33c86[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 21:19:26 2019 +0900
+
+    #27 first commit
+
+[33mcommit 12b1c1a06c614cf18705961bc98c97625d3ef4b3[m
+Merge: 132a065d 521f2186
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sat Dec 14 21:08:44 2019 +0900
+
+    Merge pull request #26 from hikkymouse1007/#9
+    
+    #9
+
+[33mcommit 521f2186b083890569fdd144c7d528d4d8af2cc3[m[33m ([m[1;31morigin/#9[m[33m, [m[1;32m#9[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 21:06:50 2019 +0900
+
+    #9 update vocab controller 同一単語入らない
+
+[33mcommit fb715ff4d11e56f3b7183e7a90fc6576eb6317c6[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 20:39:53 2019 +0900
+
+    #9 finish issue #9
+
+[33mcommit e07f1df2e08ff03f2ff3ac96e42b9554b8245df2[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 20:38:45 2019 +0900
+
+    add create and destroy action
+
+[33mcommit a33fcff88cc2303c10fbc606d5a039cf316e4ab5[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 19:17:35 2019 +0900
+
+    #9 add vocab controller
+
+[33mcommit 8fd6c757742d877635d18077c7c548295cf51d8c[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 19:12:54 2019 +0900
+
+    #9 add vocab model
+
+[33mcommit 7711cec8fa4580f2f19fac70118de64e2ff0a078[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 19:07:20 2019 +0900
+
+    #9 remove word model and controller
+
+[33mcommit 60f1dd7338d963aae6fed53f8790f0fdbdb83918[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 18:50:30 2019 +0900
+
+    #9 add word model associated
+
+[33mcommit ba133b86db4da23cc3a4dc59e4c06ce7b514286c[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 18:39:31 2019 +0900
+
+    #9 add words controller
+
+[33mcommit 8829e27d63c74481c734145ed8c4313760af9e99[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 18:29:26 2019 +0900
+
+    #9 update application.rb file
+
+[33mcommit a1ee5eac9c3bdd7ddff5acaa5ed768b4e063e750[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 18:25:59 2019 +0900
+
+    #9 add local_env file and json file .gitignore済
+
+[33mcommit 2f4cfcafe8b6d0abcafaf622562c4c3dde95771f[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 18:18:32 2019 +0900
+
+    #9 add google-cloud and google-cloud-translate gem
+
+[33mcommit 91818ea59cc7e21cb357f988e950e8ac47ad6047[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 18:15:18 2019 +0900
+
+    #9 add user_articles#show view
+
+[33mcommit eae67104e06d494f889e75934015cb04d092a037[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 17:41:45 2019 +0900
+
+    #9 first commit
+
+[33mcommit 132a065dec416f18fe75ec7219aac1a31edb72f5[m
+Merge: 1cd47f74 07662f56
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sat Dec 14 17:39:07 2019 +0900
+
+    Merge pull request #25 from hikkymouse1007/#24
+    
+    #24
+
+[33mcommit 07662f563d934335724e80e6e6f18af7010c1bd0[m[33m ([m[1;31morigin/#24[m[33m, [m[1;32m#24[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 17:37:18 2019 +0900
+
+    #24 finish issue #24
+
+[33mcommit 9c0c18de6faa3d27ff99cdc5f6a27f5e6e8fc7f8[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 17:34:43 2019 +0900
+
+    #24 add create action in user_article_controller newのアクションにもModel.new必要
+
+[33mcommit 4947e2523f92f7b53b921dc1e6289e71ffd30edb[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 16:25:34 2019 +0900
+
+    #24 add destroy action in user_article_controller
+
+[33mcommit 7beb04c4302f25811eb7b33a597550f4087a4033[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 15:34:05 2019 +0900
+
+    #24 delete article_index_view ログインした後もログイン画面・サインアップ画面にアクセスできてしまう問題
+
+[33mcommit 1cd0a96522f3b448a7242e6c84ed413b630f890e[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 13:15:55 2019 +0900
+
+    #24 add category model アソシエーション追加
+
+[33mcommit 06103114c96764393c99793caad1cdb1fcfafb6f[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 12:59:49 2019 +0900
+
+    #24 update user.rb and user_article.rb アソシエーション作成
+
+[33mcommit 358521971645f6e24fcfbfc212558f950dc128b8[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 12:54:07 2019 +0900
+
+    #24 create user_article model カテゴリは7種類でcategory modelで管理、enum使用する
+
+[33mcommit 264d85fcae9261e8171b3f940936ea14b84ab03f[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 14 12:29:06 2019 +0900
+
+    #24 update application_controller users_controllerのlogged_in_user、correct_userメゾットをapplication_controllerへ移行
+
+[33mcommit 8b54128ca2ac5325f1f3396d29493b7e7e95274f[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Fri Dec 13 00:32:19 2019 +0900
+
+    #update article controller Signet::AuthorizationErrorのエラー発生中 localの時刻を確認
+
+[33mcommit fd27fb2ba9b689225b661e90f656670876d3ddf5[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 23:35:56 2019 +0900
+
+    #24 create user_articles controller
+
+[33mcommit b64f34aa0c72975ccd50e32837b3dc467a24b570[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 23:23:15 2019 +0900
+
+    #24 first commit
+
+[33mcommit 1cd47f7410d6b985ee43b1b43ebf20cd38c9eb7a[m
+Merge: 69eecf0d 5e4e06ef
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Thu Dec 12 17:45:10 2019 +0900
+
+    Merge pull request #23 from hikkymouse1007/#22
+    
+    #22
+
+[33mcommit 5e4e06efedd0625fb45bb14f638c4abed3c45b0b[m[33m ([m[1;31morigin/#22[m[33m, [m[1;32m#22[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 17:31:20 2019 +0900
+
+    #22 finish issue #22
+
+[33mcommit 862274eb10ae48811b4573edbbff0b3ee41bc5f1[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 17:30:19 2019 +0900
+
+    #22 update user_home view ページネーション追加
+
+[33mcommit 3436743001c2c89f557ff0f3dd5e3c366b39f099[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 17:10:57 2019 +0900
+
+    #22 first commit
+
+[33mcommit 69eecf0de5630032351ac0a39d6241622bdec078[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 17:07:01 2019 +0900
+
+    install kaminari gem
+
+[33mcommit e3fe9fc161aae0d6412dd3b2f9ffc4be9be980ba[m
+Merge: 3f056955 bccd6be9
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Thu Dec 12 16:56:50 2019 +0900
+
+    Merge pull request #21 from hikkymouse1007/#20
+    
+    #20
+
+[33mcommit bccd6be9054ff235e33dd1ff7f1be21aca71f552[m[33m ([m[1;31morigin/#20[m[33m, [m[1;32m#20[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 16:55:10 2019 +0900
+
+    #20 finish issue #20
+
+[33mcommit a21a51afea8147439052e16ea9951081bf691681[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 16:49:30 2019 +0900
+
+     #20 update user_home_view hover実装
+
+[33mcommit 34d28510a19ff1795261831a02876093de6baf7b[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 16:45:28 2019 +0900
+
+    #20 update user_home_view bl新規タブ機能
+
+[33mcommit ab47a22b2472f3d28f302754396f890aa3080bcd[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 12:58:40 2019 +0900
+
+    update user_home_view block要素のリンク化
+
+[33mcommit 11d300a32fbe066b99dcdb4d532ee64f9bee3d37[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Thu Dec 12 12:56:46 2019 +0900
+
+    #20 first commit
+
+[33mcommit 3f056955e66ea2ce1baf3fdeb428bb67020c2c4e[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 17:20:55 2019 +0900
+
+    add rubocopl
+
+[33mcommit ce75f5f30adebac5b242a4e66a73ab3141d15a17[m
+Merge: f77b9c16 fc9d2411
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Tue Dec 10 14:52:29 2019 +0900
+
+    Merge pull request #18 from hikkymouse1007/#17
+    
+    #17
+
+[33mcommit fc9d2411068620c213c05c8b98b9966fd5478e30[m[33m ([m[1;31morigin/#17[m[33m, [m[1;32m#17[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 14:49:38 2019 +0900
+
+    #17 finish issue #17
+
+[33mcommit 562a8099a3ad0085477c0be0f3d73cc7492f1522[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 14:48:41 2019 +0900
+
+    #17 add rss links
+
+[33mcommit 65f2ef791ea072817adac71badbd787443b564eb[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 12:03:46 2019 +0900
+
+    #17 add httparty gem
+
+[33mcommit 7943245922ff0260347b8769d3815f68d03016f9[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 11:59:55 2019 +0900
+
+    #17 add rake file
+
+[33mcommit 05fa59144413c87f09010935bf39adc89daf0e10[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 11:50:49 2019 +0900
+
+    #17 add feedjira gem
+
+[33mcommit 233434d2c13ec9408096c05b85a023c925cd1171[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 11:48:41 2019 +0900
+
+    #17 add feed files
+
+[33mcommit f5f4a91bc157c4700d426bcc19ba3f5ea4769a61[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 11:34:58 2019 +0900
+
+    #17 update model files
+
+[33mcommit 896a2223630dbc923967f16851a0b379d3ca6add[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 11:31:49 2019 +0900
+
+    #17 add feed and entry models
+
+[33mcommit 034666e96a3dbebea20e41154370e673c7ae261a[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 10 11:24:42 2019 +0900
+
+    #17 add seed_fu
+
+[33mcommit cf4266afd926d0a64c430ea6690ca6f8f2521ffd[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Mon Dec 9 23:16:47 2019 +0900
+
+    #17 first commit
+
+[33mcommit f77b9c167110e7bb549b3d9c686bf1d50e334a60[m
+Merge: 69010387 84d6f259
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sun Dec 8 20:16:55 2019 +0900
+
+    Merge pull request #16 from hikkymouse1007/#15
+    
+    #15
+
+[33mcommit 84d6f2595791f425075552a8927b4fedb4161638[m[33m ([m[1;31morigin/#15[m[33m, [m[1;32m#15[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 20:05:46 2019 +0900
+
+    #15 finish issue
+
+[33mcommit 2c9d12b004861eda3695e18bc870148c40233b94[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 20:05:15 2019 +0900
+
+    #15 add destroy method to users_controller
+
+[33mcommit f33256b26b9fb8938ce8eb431be60e9e3420d18b[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 19:42:49 2019 +0900
+
+    #15 Add firendly forwarding
+
+[33mcommit 20385d0a0694ca3dd7a5f19409096d905697adab[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 19:25:01 2019 +0900
+
+    #15 add update method to users_controller
+
+[33mcommit c2deef0e9079da86152ace534e96e36721655eeb[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 18:54:33 2019 +0900
+
+    First commit
+
+[33mcommit 6901038712145b4ad715580a6e647eb4f596ecba[m[33m ([m[1;32m#6[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 18:26:47 2019 +0900
+
+    #6 finish remember me
+
+[33mcommit ce1380a649aa64365a3501e286478c07a308d1c7[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 17:51:02 2019 +0900
+
+    #6 update session_helper
+
+[33mcommit 26c4a08add4ef1331cdb47c6e6099a6a5f39d195[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 17:18:00 2019 +0900
+
+    #6 add remember_digest column
+
+[33mcommit 533d69141d85f58a1184df3454ac0ac31e249d53[m
+Author: hikkymouse1007 <mc.mdt1007it@gmail.com>
+Date:   Sun Dec 8 16:44:53 2019 +0900
+
+    update .gitignore
+
+[33mcommit aab88691198f9d68c1c02bebb2b87f90c8d4878a[m
+Merge: df836d70 fddd66d3
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sun Dec 8 14:37:42 2019 +0900
+
+    Merge pull request #14 from hikkymouse1007/#7
+    
+    #7
+
+[33mcommit fddd66d3f1061ad3357a8d1fa6f83bc823e4400f[m[33m ([m[1;31morigin/#7[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 7 17:39:33 2019 +0900
+
+    #7 edit puma.rb
+
+[33mcommit e3cb3c94cfea6a15e45b6c7cae4b1efa0094d768[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 7 17:20:49 2019 +0900
+
+    #7 add mysql2 gem
+
+[33mcommit df836d70500c259bbdbc991863b0f09dbc72c286[m
+Merge: dbd51e96 cb0f35e3
+Author: hikkymouse1007 <54907440+hikkymouse1007@users.noreply.github.com>
+Date:   Sat Dec 7 17:10:59 2019 +0900
+
+    Merge pull request #13 from hikkymouse1007/#1
+    
+    #1
+
+[33mcommit cb0f35e33ea180ac63a1f0aa3b78dcc44e2b0cce[m[33m ([m[1;31morigin/#1[m[33m)[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Sat Dec 7 13:49:31 2019 +0900
+
+    update user controller
+
+[33mcommit f320011644e381c653dcaa11f94f8b4fb2221e3a[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 4 23:44:27 2019 +0900
+
+    #1 Add session controller
+
+[33mcommit 15f63be43dc1791db210eaf0776c9529de57efda[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 4 19:40:21 2019 +0900
+
+    #1 Upade application.rb file
+
+[33mcommit 2db62f3b1abb333b218c103ba66d3e98ec99e4c7[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 4 19:32:13 2019 +0900
+
+    #1 Fix signup page
+
+[33mcommit 5bad833a8abca94bad8ca57a6635e37433e48398[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 4 19:25:21 2019 +0900
+
+    #1 Add signup page
+
+[33mcommit 2f8f4f017f4c2ef083be3b86dbbaa167cd69c913[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 4 14:05:22 2019 +0900
+
+    #1 Add User model
+
+[33mcommit dbd51e96c1ff0a4a9b867b29ae17425ebf061769[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Wed Dec 4 00:59:14 2019 +0900
+
+    install materialize
+
+[33mcommit c554b8e1e32e906b415d61c29af07d9fd55b1411[m
+Author: Mashimo Hiroki <mc.mdt1007it@gmail.com>
+Date:   Tue Dec 3 06:48:44 2019 +0000
+
+    Start new project
