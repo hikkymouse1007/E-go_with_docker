@@ -11,9 +11,6 @@ class VocabsController < ApplicationController
 		 	@vocab.english = @english
 		 	@vocab.user_article_id = params[:user_article_id]
 	 	    @vocab.save
-	 	else
-	 	  	flash[:success] = "登録済の単語です"
-	 	    redirect_to user_article_path(params[:user_article_id])
 	 	end
 	end
 
