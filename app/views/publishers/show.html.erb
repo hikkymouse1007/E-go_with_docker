@@ -1,13 +1,13 @@
 <div class="container">
   <div class="inner ">
     <nav>
-    <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
-        <li><%= link_to "Home ",root_path %></li>
-        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
-     </ul>
-    </div>
-  </nav>
+      <div class="nav-wrapper pink lighten-2">
+        <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+          <li><%= link_to "Home ",root_path %></li>
+          <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+        </ul>
+      </div>
+    </nav>
     <%= render 'shared/link_nav' %>
     <h1 class="center"><%= @top_headlines[0].name %></h1>
     <p><%= @today %></p>
@@ -41,15 +41,15 @@
                   <p class="modal-close waves-effect waves-green btn-flat">Close</p>
                 </div>
               </div>
-              <div class="card-action">
-                <%= link_to "このニュースを記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt),class: "blue-text"  %>
-              </div>
+            <div class="card-action">
+              <%= link_to "このニュースを記事にする", new_user_article_path(title: headline.title,url: headline.url, publishedAt: headline.publishedAt),class: "blue-text"  %>
             </div>
           </div>
-        <% end %>
-      <% else %>
-        <p>Headline news doesn't exist here</p>
+        </div>
       <% end %>
+    <% else %>
+      <p>Headline news doesn't exist here</p>
+    <% end %>
     </div>
   </div>
 </div>

@@ -1,23 +1,15 @@
 <div class="container">
-  <nav>
-    <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
-        <li><%= link_to "Home",root_path %></li>
-        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
-        <li><%= link_to "Vocabulary", user_words_path %></li>
-        <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
-      </ul>
-    </div>
-  </nav>
+  <%= render partial: 'shared/link_nav_user' %>
   <nav>
     <div class="nav-wrapper  green lighten-2 ">
       <ul id="nav-mobile" class="list-center hide-on-med-and-down">
         <% @capitals1.each do |capital| %>
-        <li><%= link_to capital ,user_words_path(capital: capital.downcase) %></li>
+          <li><%= link_to capital ,user_words_path(capital: capital.downcase) %></li>
         <% end %>
-     </ul>
+      </ul>
     </div>
   </nav>
+
   <nav>
     <div class="nav-wrapper  green lighten-2">
      <ul id="nav-mobile" class="list-center hide-on-med-and-down">
@@ -31,7 +23,7 @@
 
 <div class="inner ">
   <div class="row">
-	<div class="your-vocabulary col s12">
+    <div class="your-vocabulary col s12">
       <h3 class="center-align">Vocabulary</h3>
       <table class="centered">
         <thead>

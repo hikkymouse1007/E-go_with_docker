@@ -41,5 +41,4 @@
 .env.development
 .env.production
 
-# Ignore ubuntu-log file
- ubuntu-bionic-18.04-cloudimg-console.logn
+
