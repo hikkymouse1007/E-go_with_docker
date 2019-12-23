@@ -1,14 +1,7 @@
 <div class="container">
   <div class="inner ">
-     <nav>
-      <div class="nav-wrapper pink lighten-2">
-        <ul id="nav-mobile" class="hide-on-med-and-down list-center">
-          <li><%= link_to "Home ",root_path %></li>
-          <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
-        </ul>
-      </div>
-    </nav>
-    <%= render 'shared/link_nav' %>
+    <%= render partial: 'shared/link_nav_user' %>
+    <%= render partial: 'shared/link_nav' %>
     <h1 class="center"><%= @category.capitalize %></h1>
     <div class="row flex">
       <% @sources.each do |source| %>
