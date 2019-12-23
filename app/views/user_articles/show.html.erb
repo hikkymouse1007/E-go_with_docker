@@ -8,8 +8,7 @@
 	<p><%= @article.japanese_content%></p>
 	<p >【vacabulary】</p>
 	<% @words.each do |word|  %>
-	<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,
-	remote: true %>
+	<%= link_to word.downcase, create_vocab_path(user_article_id:params[:id],english: word), method: :post,remote: true %>
 	<% end %>
 	</div>
 	<div class="col s12 m3">

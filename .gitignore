@@ -40,3 +40,6 @@
 # lgnore local_env file and json file
 .env.development
 .env.production
+
+# Ignore ubuntu-log file
+ ubuntu-bionic-18.04-cloudimg-console.logn
