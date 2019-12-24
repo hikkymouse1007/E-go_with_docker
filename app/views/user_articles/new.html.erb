@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row flex">
-    <div class="col s12 m6">
-      <h1>NewPost</h1>
+    <div class="col s12 m8">
+      <h1 class="center">NewPost</h1>
       <%= form_with model:@article, url:user_articles_path, method: :post, local: true do |f| %>
         <%= f.label :title %>
         <%= f.text_field :title, value:@title%>
         <div class="form-control">
           <%= f.label :content %>
-          <%= f.text_area :content,:size=>"60x10" %>
+          <%= f.text_area :content,class: "materialize-textarea" %>
         </div>
         <%= f.label :url%>
         <%= f.text_field :url, value:@url %>

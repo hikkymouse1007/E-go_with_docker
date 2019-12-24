@@ -1,12 +1,14 @@
-<nav>
-  <div class="nav-wrapper pink lighten-2">
-    <ul id="nav-mobile" class="hide-on-med-and-down list-center">
-        <li><%= link_to "Home",root_path %></li>
-        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
-      <% if current_user.present? %>
-        <li><%= link_to "Vocabulary", user_words_path(current_user) %></li>
-        <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+<div class="col s12 m8">
+  <nav>
+    <div class="nav-wrapper pink lighten-2 s6">
+      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
+          <li><%= link_to "Home",root_path %></li>
+          <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
+        <% if current_user.present? %>
+          <li><%= link_to "Vocabulary", user_words_path(current_user) %></li>
+          <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>

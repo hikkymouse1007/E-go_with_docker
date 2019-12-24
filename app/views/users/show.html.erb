@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="inner">
   <%= render partial: 'shared/link_nav_user' %>
   <nav>
     <div class="nav-wrapper  green lighten-2">
@@ -13,7 +14,7 @@
   <div class="inner ">
     <div class="row">
       <h1 class="center">My Page</h1>
-        <div class="col s12 m12">
+        <div class="col s10 offset-l1 ">
           <% @articles.each do |article| %>
             <div class="card white hoverable">
               <div class="card-content ">
@@ -21,7 +22,7 @@
                   <%= article.title %>
                 </span>
                 <div class="content black-text">
-                <p><%= article.japanese_title%></p>
+                <p><%= article.japanese_title%></p><br>
                 <p> Published at <%= article.published_at %></p>
                 <p><%= link_to article.url,article.url,class: "blue-text" ,target: :_blank%></p>
                 </div>
@@ -33,17 +34,17 @@
                 <div class="option">
                   <%= link_to  "Show", user_article_path(id: article.id) ,class: 'btn blue lighten-2'%>
                   <%= link_to  "Edit", edit_user_article_path(id:article.id) ,class: 'btn green accent-3'%>
-                  <%= link_to  "Delete", user_article_path(id: article.id), method: :delete, class: 'btn red darken-1' %>
+                  <%= link_to  "Delete", user_article_path(id: article.id), method: :delete, class: 'btn red darken-1', data: { confirm: "記事を削除しますか？" } %>
                 </div>
               </div>
             </div>
           <% end %>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="pagination center-align">
+    <%= paginate @articles %>
   </div>
 </div>
-<div class="pagination center-align">
-  <%= paginate @articles %>
-</div>
-
 

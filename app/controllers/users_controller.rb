@@ -1,4 +1,4 @@
-  class UsersController < ApplicationController
+class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update,:show,:destroy]
   before_action :correct_user,   only: [:edit, :update,:show,:destroy]
 
@@ -8,6 +8,17 @@
     newsapi = News.new("#{news_api_key}")
     all_articles = newsapi.get_everything(sources: 'bbc-news',language: 'en',page: 2)
     @all_articles = Kaminari.paginate_array(all_articles).page(params[:page]).per(8)
+  end
+
+  def about
+      project_id = ENV["CLOUD_PROJECT_ID"]
+      translate   = Google::Cloud::Translate.new version: :v2, project_id: project_id
+      @english = params[:english]
+      target = "ja"
+      @japanese = translate.translate @english, to: target
+      @vocab = Vocab.new
+      @vocab.japanese = @japanese
+      @vocab.english = @english
   end
 
   def new
