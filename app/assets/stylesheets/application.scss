@@ -76,10 +76,21 @@ main {
 }
 
 
-
 .header-content-title{
   color: white;
   background-color: rgba(135,206,250,1);
+}
+
+
+.card {
+    box-sizing: border-box;
+    height: calc(100% - 1.5rem); /* margin の .5rem + 1rem を引いている */
+    padding-bottom: 76px; /* ボタン分浮かす */
+}
+.card .card-action {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 

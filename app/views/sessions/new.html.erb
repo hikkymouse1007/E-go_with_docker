@@ -1,26 +1,26 @@
 <div class="container">
-<div class="row flex">
-  <div class="col s12 m6 center">
-    <h1>Log in</h1>
-    <%= form_with scope: :session, url:login_path, local: true do |f| %>
-      <div class="row">
-        <div class="input-field col s12">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: 'form-control' %>
+  <div class="row flex">
+    <div class="col s12 m6 center">
+      <h1>Log in</h1>
+      <%= form_with scope: :session, url:login_path, local: true do |f| %>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control' %>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
         </div>
-      </div>
-        <%= f.label :remember_me, class: "checkbox inline" do %>
-          <%= f.check_box :remember_me %>
-          <span>Remember me on this computer</span>
-        <% end %>
-      <p><%= f.submit "Log in", class: "btn  blue lighten-2" %></p>
-    <% end %>
+          <%= f.label :remember_me, class: "checkbox inline" do %>
+            <%= f.check_box :remember_me %>
+            <span>Remember me on this computer</span>
+          <% end %>
+        <p><%= f.submit "Log in", class: "btn  blue lighten-2" %></p>
+      <% end %>
+    </div>
   </div>
-</div>
 </div>

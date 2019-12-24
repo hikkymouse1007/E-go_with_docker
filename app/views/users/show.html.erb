@@ -1,14 +1,6 @@
 <div class="container">
-  <nav>
-    <div class="nav-wrapper pink lighten-2">
-      <ul id="nav-mobile" class="hide-on-med-and-down list-center">
-        <li><%= link_to "Home",root_path %></li>
-        <li><%= link_to "Publishers",publishers_path(category: "general") %></li>
-        <li><%= link_to "Vocabulary", user_words_path %></li>
-        <li><%= link_to "NewPost" , new_user_article_path(current_user) %></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="inner">
+  <%= render partial: 'shared/link_nav_user' %>
   <nav>
     <div class="nav-wrapper  green lighten-2">
       <ul id="nav-mobile" class="list-center hide-on-med-and-down">
@@ -18,41 +10,41 @@
         <% end %>
      </ul>
     </div>
-</nav>
-<div class="inner ">
-  <div class="row">
-    <h1 class="center">My Page</h1>
-      <div class="col s12 m12">
-        <% @articles.each do |article| %>
-        <div class="card white hoverable">
-          <div class="card-content ">
-            <span class="card-title ">
-              <%= article.title %>
-            </span>
-            <div class="content black-text">
-            <p><%= article.japanese_title%></p>
-            <p> Published at <%= article.published_at %></p>
-            <p><%= link_to article.url,article.url,class: "blue-text" ,target: :_blank%></p>
+  </nav>
+  <div class="inner ">
+    <div class="row">
+      <h1 class="center">My Page</h1>
+        <div class="col s10 offset-l1 ">
+          <% @articles.each do |article| %>
+            <div class="card white hoverable">
+              <div class="card-content ">
+                <span class="card-title ">
+                  <%= article.title %>
+                </span>
+                <div class="content black-text">
+                <p><%= article.japanese_title%></p><br>
+                <p> Published at <%= article.published_at %></p>
+                <p><%= link_to article.url,article.url,class: "blue-text" ,target: :_blank%></p>
+                </div>
+                <div class="chip green lighten-2">
+                  <%= link_to article.category, user_path(category:article.category), class: "white-text"%>
+                </div>
+              </div>
+              <div class="card-action center-align">
+                <div class="option">
+                  <%= link_to  "Show", user_article_path(id: article.id) ,class: 'btn blue lighten-2'%>
+                  <%= link_to  "Edit", edit_user_article_path(id:article.id) ,class: 'btn green accent-3'%>
+                  <%= link_to  "Delete", user_article_path(id: article.id), method: :delete, class: 'btn red darken-1', data: { confirm: "記事を削除しますか？" } %>
+                </div>
+              </div>
             </div>
-            <div class="chip green lighten-2">
-              <%= link_to article.category, user_path(category:article.category), class: "white-text"%>
-            </div>
-          </div>
-          <div class="card-action center-align">
-            <div class="option">
-              <%= link_to  "Show", user_article_path(id: article.id) ,class: 'btn blue lighten-2'%>
-              <%= link_to  "Edit", edit_user_article_path(id:article.id) ,class: 'btn green accent-3'%>
-            <%= link_to  "Delete", user_article_path(id: article.id), method: :delete, class: 'btn red darken-1' %>
-            </div>
-          </div>
+          <% end %>
         </div>
-        <% end %>
       </div>
     </div>
-    </div>
+  </div>
+  <div class="pagination center-align">
+    <%= paginate @articles %>
+  </div>
 </div>
-<div class="pagination center-align">
-  <%= paginate @articles %>
-</div>
-
 
