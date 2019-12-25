@@ -4,11 +4,9 @@ class UserArticlesController < ApplicationController
 
   def show
     if current_user.user_articles.find_by(id:params[:id])
-      @current_user = current_user
       @article = UserArticle.find(params[:id])
-      @words1 = @article.title.scan(/\w+/).uniq {|word| word.downcase}
-      @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
-      @words = @words1 + @words2
+      all_words = @article.title.scan(/\w+/).uniq {|word| word.downcase} + @article.content.scan(/\w+/).uniq {|word| word.downcase}
+      @words = (all_words).uniq
       @vocabs = @article.vocabs
     else
       redirect_to root_url

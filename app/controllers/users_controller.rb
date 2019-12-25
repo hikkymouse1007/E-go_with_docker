@@ -49,9 +49,9 @@ class UsersController < ApplicationController
   def words
     @capitals1 = ("A".."N").to_a
     @capitals2 = ("O".."Z").to_a
-    @articles = current_user.user_articles.includes(:vocabs) #n+1
+    articles = current_user.user_articles.includes(:vocabs) #n+1
     vocab_ary = []
-    @articles.each do |article|
+    articles.each do |article|
       article.vocabs.each do |vocab|
         unless vocab_ary.map{ |v| v[:english] }.include?(vocab.english)
           vocab_ary << vocab
