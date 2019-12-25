@@ -10,17 +10,6 @@ class UsersController < ApplicationController
     @all_articles = Kaminari.paginate_array(all_articles).page(params[:page]).per(8)
   end
 
-  def about
-      project_id = ENV["CLOUD_PROJECT_ID"]
-      translate   = Google::Cloud::Translate.new version: :v2, project_id: project_id
-      @english = params[:english]
-      target = "ja"
-      @japanese = translate.translate @english, to: target
-      @vocab = Vocab.new
-      @vocab.japanese = @japanese
-      @vocab.english = @english
-  end
-
   def new
   	@user = User.new
   end
