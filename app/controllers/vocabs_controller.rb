@@ -1,5 +1,5 @@
 class VocabsController < ApplicationController
-  
+
   def create
     unless Vocab.find_by(user_article_id:params[:user_article_id], english: params[:english])
       project_id = ENV["CLOUD_PROJECT_ID"]

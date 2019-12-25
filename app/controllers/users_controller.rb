@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   def words
     @capitals1 = ("A".."N").to_a
     @capitals2 = ("O".."Z").to_a
-    @articles = current_user.user_articles.includes(:vocabs)
+    @articles = current_user.user_articles.includes(:vocabs) #n+1
     vocab_ary = []
     @articles.each do |article|
       article.vocabs.each do |vocab|
@@ -59,9 +59,8 @@ class UsersController < ApplicationController
         end
       end
     vocabs = vocab_ary.sort_by{ |vocab| vocab[:english].downcase }
-
     if params[:capital].present?
-      vocabs_capital = vocabs.select {|vocab| vocab[:english][0].include?(params[:capital])}
+      vocabs_capital = vocabs.select {|vocab| vocab[:english][0].include?(params[:capital].upcase) || vocab[:english][0].include?(params[:capital])}
       @vocabs = Kaminari.paginate_array(vocabs_capital).page(params[:page]).per(20)
     else
       @vocabs = Kaminari.paginate_array(vocabs).page(params[:page]).per(20)
@@ -87,8 +86,6 @@ class UsersController < ApplicationController
     flash[:success] = "See ya later! Hope you come back here!!"
     redirect_to root_url
   end
-
-
 
     private
 
