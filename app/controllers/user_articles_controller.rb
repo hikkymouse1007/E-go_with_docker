@@ -1,18 +1,18 @@
 class UserArticlesController < ApplicationController
 
-  before_action :logged_in_user, only: [:index,:show,:new, ]
-
-  def index
-    @articles = current_user.user_articles
-  end
+  before_action :logged_in_user
 
   def show
-  @current_user = current_user
-    @article = UserArticle.find(params[:id])
-    @words1 = @article.title.scan(/\w+/).uniq {|word| word.downcase}
-    @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
-    @words = @words1 + @words2
-    @vocabs = @article.vocabs
+    if current_user.user_articles.find_by(id:params[:id])
+      @current_user = current_user
+      @article = UserArticle.find(params[:id])
+      @words1 = @article.title.scan(/\w+/).uniq {|word| word.downcase}
+      @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
+      @words = @words1 + @words2
+      @vocabs = @article.vocabs
+    else
+      redirect_to root_url
+    end
   end
 
   def new
@@ -70,4 +70,9 @@ class UserArticlesController < ApplicationController
   def user_article_params
   params.require(:user_article).permit(:category,:title,:content,:url,:published_at,:japanese_title,:japanese_content)
   end
+
+  def correct_article
+    redirect_to(root_url)
+  end
+
 end

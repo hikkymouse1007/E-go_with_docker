@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update,:show,:destroy]
-  before_action :correct_user,   only: [:edit, :update,:show,:destroy]
+  before_action :logged_in_user, only: [:edit,:update,:words,:show,:destroy]
+  before_action :correct_user,   only: [:edit,:update,:words,:show,:destroy]
 
   def home
     @today = Date.today
@@ -11,7 +11,11 @@ class UsersController < ApplicationController
   end
 
   def new
-  	@user = User.new
+    if logged_in?
+      redirect_to root_url
+    else
+      @user = User.new
+    end
   end
 
   def create
