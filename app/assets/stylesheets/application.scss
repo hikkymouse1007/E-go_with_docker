@@ -29,9 +29,11 @@ body {
   min-height: 100vh;
   flex-direction: column;
  }
+
  main {
      flex: 1 0 auto;
  }
+
 /*header*/
 .brand-logo{
 	margin:0 30px;
@@ -70,7 +72,6 @@ main {
   margin: 0 auto;
 }
 
-
 .header-content{
   display: flex;
   align-items: center;
@@ -87,12 +88,12 @@ main {
   background-color: rgba(135,206,250,1);
 }
 
-
 .card {
     box-sizing: border-box;
-    height: calc(100% - 1.5rem); /* margin の .5rem + 1rem を引いている */
-    padding-bottom: 76px; /* ボタン分浮かす */
+    height: calc(100% - 1.5rem);
+    padding-bottom: 76px;
 }
+
 .card .card-action {
     bottom: 0;
     position: absolute;

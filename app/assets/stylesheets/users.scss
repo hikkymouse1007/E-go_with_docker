@@ -4,13 +4,10 @@
 
 /*users#home/
 
-
-
 .all_article-image{
     width: 10%;
     height: auto;
 }
-
 
 /*users#new*/
 .container .inner {
@@ -19,10 +16,14 @@
 	margin:0 10px;
 }
 
-
 .container .inner .main-visual{
 	widht:100%;
 	height: 300px;
 	display:flex;
 }
 
+
+.flex-text-box{
+	display:flex;
+	justify-content: center;
+}
