@@ -1,13 +1,14 @@
 class UserArticlesController < ApplicationController
 
-  before_action :logged_in_user, only: [:index,:show,:new, ]
+  before_action :logged_in_user, only: [:index,:show,:new]
+  before_action :correct_user,   only: [:index, :show,:edit,:update,:destroy]
 
   def index
     @articles = current_user.user_articles
   end
 
   def show
-  @current_user = current_user
+    @current_user = current_user
     @article = UserArticle.find(params[:id])
     @words1 = @article.title.scan(/\w+/).uniq {|word| word.downcase}
     @words2 = @article.content.scan(/\w+/).uniq {|word| word.downcase}
