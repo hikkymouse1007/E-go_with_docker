@@ -31,7 +31,8 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
-    @categories = {"Business" =>1, "Entertainment" =>2, "General" =>3, "Health" =>4, "Science" =>5, "Sports" =>6, "Technology" =>7, "Other" =>8 }
+    @categories = {"Business" =>1, "Entertainment" =>2, "General" =>3, "Health" =>4, "Science" =>5,
+                   "Sports"   =>6, "Technology"    =>7, "Other"   =>8 }
     if params[:category].present?
       @articles = current_user.user_articles.where(category:params[:category]).page(params[:page]).per(5).order(created_at: :desc)
     else
