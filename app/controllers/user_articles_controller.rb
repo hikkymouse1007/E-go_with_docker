@@ -51,6 +51,7 @@ class UserArticlesController < ApplicationController
     if @article.update(user_article_params)
       redirect_to user_article_path(@article), notice: 'Article updated!'
     else
+      flash.now[:danger] = '記入漏れがあります'
       render :edit
     end
   end
