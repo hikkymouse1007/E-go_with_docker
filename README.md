@@ -5,28 +5,28 @@
 http://e-go115.com/
 # アプリで使用している技術・機能一覧
 -言語・フレームワーク
- *Ruby
- *RubyonRails
- *jQuery
- *Materialize
+ -Ruby
+ -RubyonRails
+ -jQuery
+ -Materialize
 -テスト
- *Rspec
+ -Rspec
 -インフラ(AWS)
- *EC2
- *RDB
- *EIP
+ -EC2
+ -RDB
+ -EIP
 -データベース
- *MySQL
+ -MySQL
 -サーバ
- *Webサーバ Nginx
- *Appサーバ Puma
+ -Webサーバ Nginx
+ -Appサーバ Puma
 -API
- *NewsAPI
- *Google Cloud Translation API
+ -NewsAPI
+ -Google Cloud Translation API
 -機能一覧
- *ログイン機能
- *ニュース記事の登録機能
- *カテゴリタグ検索機能
- *本文翻訳機能
- *単語翻訳機能
- *リアルタイムニュース表示機能
+ -ログイン機能
+ -ニュース記事の登録機能
+ -カテゴリタグ検索機能
+ -本文翻訳機能
+ -単語翻訳機能
+ -リアルタイムニュース表示機能
