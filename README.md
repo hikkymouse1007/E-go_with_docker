@@ -4,11 +4,11 @@
 # リンク
 http://e-go115.com/
 # アプリで使用している技術・機能一覧
--言語・フレームワーク
- -Ruby
- -RubyonRails
- -jQuery
- -Materialize
+- 言語・フレームワーク
+ - Ruby
+ - RubyonRails
+ - jQuery
+ - Materialize
 -テスト
  -Rspec
 -インフラ(AWS)
