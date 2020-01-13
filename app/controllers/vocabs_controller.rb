@@ -1,9 +1,8 @@
 class VocabsController < ApplicationController
-
   def create
-    unless Vocab.find_by(user_article_id:params[:user_article_id], english: params[:english])
+    unless Vocab.find_by(user_article_id: params[:user_article_id], english: params[:english])
       project_id = ENV["CLOUD_PROJECT_ID"]
-      translate   = Google::Cloud::Translate.new version: :v2, project_id: project_id
+      translate = Google::Cloud::Translate.new version: :v2, project_id: project_id
       @english = params[:english]
       target = "ja"
       @japanese = translate.translate @english, to: target
