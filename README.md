@@ -3,6 +3,8 @@
 ![image](https://user-images.githubusercontent.com/54907440/72219612-60dc5480-358b-11ea-956f-d71d87d16b2f.png)
 # リンク
 http://e-go115.com/
+# 動作画面
+![circleanimationmuvie](https://user-images.githubusercontent.com/54907440/72403043-3c06fd80-3794-11ea-81c6-d63fae5cebb2.gif)
 # アプリで使用している技術・機能一覧
 - 言語・フレームワーク
   - Ruby
