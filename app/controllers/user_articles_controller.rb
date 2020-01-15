@@ -3,7 +3,7 @@ class UserArticlesController < ApplicationController
   def show
     if current_user.user_articles.find_by(id: params[:id])
       @article = UserArticle.find(params[:id])
-      all_words = @article.title.scan(/\w+/).uniq { |word| word.downcase } + @article.content.scan(/\w+/).uniq { |word| word.downcase }
+      all_words = @article.title.scan(/\w+/).uniq(&:downcase) + @article.content.scan(/\w+/).uniq(&:downcase)
       @words = all_words.uniq
       @vocabs = @article.vocabs
     else

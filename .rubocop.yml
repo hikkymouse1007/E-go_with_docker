@@ -30,3 +30,5 @@ AllCops:
     - config/unicorn.rb
     - config/unicorn_staging.rb
     - tmp/**/*
+    - Gemfile
+    - bin/**

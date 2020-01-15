@@ -42,27 +42,12 @@ Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
 
-
-# Offense count: 3
-# Cop supports --auto-correct.
-Style/ExpandPathArguments:
-  Exclude:
-    - 'bin/rails'
-    - 'bin/rake'
-    - 'bin/rspec'
-
 # Offense count: 81
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: always, never
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-# Offense count: 2
-Style/MixinUsage:
-  Exclude:
-    - 'bin/setup'
-    - 'bin/update'
 
 # 渡された文字列のハッシュ値を返すメゾット
 # Offense count: 1
@@ -79,20 +64,6 @@ Style/MutableConstant:
   Exclude:
     - 'app/models/user.rb'
 
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/RedundantBegin:
-  Exclude:
-    - 'bin/yarn'
-
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/StderrPuts:
-  Exclude:
-    - 'bin/yarn'
-
 #シングルクオーテーションの推奨
 # Offense count: 130
 # Cop supports --auto-correct.
@@ -100,21 +71,6 @@ Style/StderrPuts:
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
   Enabled: false
-
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: MinSize.
-# SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: respond_to, define_method
-Style/SymbolProc:
-  Exclude:
-    - 'app/controllers/user_articles_controller.rb'
 
 # Offense count: 49
 # Cop supports --auto-correct.

@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'publishers', to: 'publishers#index'
   get 'publishers/:sources', to: 'publishers#show', as: "show_publisher"
 
-  resources :user_articles, only: [:show, :new, :create, :edit, :update, :destroy]
+  resources :user_articles, only: %i[show new create edit update destroy]
 
   post 'user_articles/:id', to: 'vocabs#create', as: 'create_vocab'
   delete 'user_articles', to: 'vocabs#destroy', as: 'destroy_vocab'
