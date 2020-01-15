@@ -7,8 +7,8 @@ http://e-go115.com/
 ![E-go](https://user-images.githubusercontent.com/54907440/72409546-6a430800-37a9-11ea-842d-d649474859a6.gif)
 # アプリで使用している技術・機能一覧
 - 言語・フレームワーク
-  - Ruby
-  - RubyonRails
+  - Ruby 2.5.5
+  - RubyonRails 5.2.3
   - jQuery
   - Materialize
 - テスト
