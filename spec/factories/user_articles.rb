@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user_article do
-  	association :user
+    association :user
     category "Business"
     title "Test Title"
     content "This is a test content."
