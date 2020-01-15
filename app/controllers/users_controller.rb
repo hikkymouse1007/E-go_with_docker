@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def home
     @today = Date.today
     news_api_key = ENV["NEWS_API_KEY_ID"]
-    newsapi = News.new("#{news_api_key}")
+    newsapi = News.new(news_api_key)
     all_articles = newsapi.get_everything(sources: 'bbc-news', language: 'en', page: 2)
     @all_articles = Kaminari.paginate_array(all_articles).page(params[:page]).per(8)
   end
@@ -31,11 +31,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @categories = { "経済" => 1, "エンターテイメント" => 2, "一般" => 3, "医療" => 4, "科学" => 5, "スポーツ" => 6, "技術" => 7, "その他" => 8 }
-    if params[:category].present?
-      @articles = current_user.user_articles.where(category: params[:category]).page(params[:page]).per(5).order(created_at: :desc)
-    else
-      @articles = current_user.user_articles.page(params[:page]).per(5).order(created_at: :desc)
-    end
+    @articles = if params[:category].present?
+                  current_user.user_articles.where(category: params[:category]).page(params[:page]).per(5).order(created_at: :desc)
+                else
+                  current_user.user_articles.page(params[:page]).per(5).order(created_at: :desc)
+                end
   end
 
   def category
@@ -51,9 +51,7 @@ class UsersController < ApplicationController
     vocab_ary = []
     articles.each do |article|
       article.vocabs.each do |vocab|
-        unless vocab_ary.map { |v| v[:english] }.include?(vocab.english)
-          vocab_ary << vocab
-        end
+        vocab_ary << vocab unless vocab_ary.map { |v| v[:english] }.include?(vocab.english)
       end
     end
     vocabs = vocab_ary.sort_by { |vocab| vocab[:english].downcase }

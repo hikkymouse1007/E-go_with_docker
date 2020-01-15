@@ -6,22 +6,22 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 1
 # exists?メゾットのスペル指摘
+# Offense count: 1
 # Cop supports --auto-correct.
 Lint/DeprecatedClassMethods:
   Exclude:
     - 'config/application.rb'
 
+# exists?メゾットのスペル指摘
 # Offense count: 1
-# Factorybotのデータ指摘　現在は保留中
 Lint/UselessAssignment:
   Exclude:
     - 'spec/models/user_article_spec.rb'
 
 # Offense count: 7
-# Metrics/AbcSize:
-#   Max: 42
+Metrics/AbcSize:
+  Max: 42
 
 # Offense count: 2
 # Configuration parameters: CountComments, ExcludedMethods.
@@ -29,23 +29,12 @@ Lint/UselessAssignment:
 Metrics/BlockLength:
   Max: 39
 
+# contorllerのfat化
 # Offense count: 5
 # Configuration parameters: CountComments, ExcludedMethods.
 Metrics/MethodLength:
   Max: 18
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Security/YAMLLoad:
-  Exclude:
-    - 'config/application.rb'
-
-# Offense count: 7
-# Configuration parameters: AllowedChars.
-Style/AsciiComments:
-  Exclude:
-    - 'config/environments/development.rb'
-    - 'config/puma.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -53,31 +42,6 @@ Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: AutoCorrect, EnforcedStyle.
-# SupportedStyles: nested, compact
-Style/ClassAndModuleChildren:
-  Exclude:
-    - 'test/test_helper.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/ClassMethods:
-  Exclude:
-    - 'app/models/user.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SingleLineConditionsOnly, IncludeTernaryExpressions.
-# SupportedStyles: assign_to_condition, assign_inside_condition
-Style/ConditionalAssignment:
-  Exclude:
-    - 'app/controllers/users_controller.rb'
-
-# Offense count: 25
-Style/Documentation:
-  Enabled: false
 
 # Offense count: 3
 # Cop supports --auto-correct.
@@ -95,35 +59,18 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 
 # Offense count: 2
-# Configuration parameters: MinBodyLength.
-Style/GuardClause:
-  Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/vocabs_controller.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/IfUnlessModifier:
-  Exclude:
-    - 'app/controllers/users_controller.rb'
-
-# Offense count: 2
 Style/MixinUsage:
   Exclude:
     - 'bin/setup'
     - 'bin/update'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/MultilineIfModifier:
-  Exclude:
-    - 'config/application.rb'
-
+# 渡された文字列のハッシュ値を返すメゾット
 # Offense count: 1
 Style/MultilineTernaryOperator:
   Exclude:
     - 'app/models/user.rb'
 
+#freezeメゾットの警告
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
@@ -132,12 +79,6 @@ Style/MutableConstant:
   Exclude:
     - 'app/models/user.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: MinDigits, Strict.
-Style/NumericLiterals:
-  Exclude:
-    - 'db/schema.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -145,27 +86,6 @@ Style/RedundantBegin:
   Exclude:
     - 'bin/yarn'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/RedundantInterpolation:
-  Exclude:
-    - 'app/controllers/publishers_controller.rb'
-    - 'app/controllers/users_controller.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/RedundantParentheses:
-  Exclude:
-    - 'app/controllers/user_articles_controller.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: ConvertCodeThatCanStartToReturnNil, AllowedMethods.
-# AllowedMethods: present?, blank?, presence, try, try!
-Style/SafeNavigation:
-  Exclude:
-    - 'app/controllers/sessions_controller.rb'
-    - 'app/helpers/sessions_helper.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
@@ -173,6 +93,7 @@ Style/StderrPuts:
   Exclude:
     - 'bin/yarn'
 
+#シングルクオーテーションの推奨
 # Offense count: 130
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
@@ -202,6 +123,4 @@ Style/SymbolProc:
 Metrics/LineLength:
   Max: 208
 
-# Use only ascii symbols in comments.
-AsciiComments:
-  Enabled: false
+
