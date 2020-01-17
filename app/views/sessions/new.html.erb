@@ -21,6 +21,11 @@
           <% end %>
         <p><%= f.submit "Log in", class: "btn  blue lighten-2" %></p>
       <% end %>
+      <%= form_with scope: :session, url:login_path, local: true do |f| %>
+        <%= f.hidden_field :email, value: 'test@mail.com' %>
+        <%= f.hidden_field :password, value: 'foobar' %>
+        <p><%= f.submit "テストユーザーログイン", class: "btn  blue lighten-2" %></p>
+      <% end %>
     </div>
   </div>
 </div>

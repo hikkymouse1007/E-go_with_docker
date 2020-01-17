@@ -31,6 +31,11 @@
       </div>
         <%= f.submit "Create New Account", class: "btn btn-primary blue lighten-2 " %>
       <% end %>
+      <%= form_with scope: :session, url:login_path, local: true do |f| %>
+        <%= f.hidden_field :email, value: 'test@mail.com' %>
+        <%= f.hidden_field :password, value: 'foobar' %>
+        <p><%= f.submit "テストユーザーログイン", class: "btn  blue lighten-2" %></p>
+      <% end %>
     </div>
   </div>
 

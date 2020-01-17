@@ -29,9 +29,11 @@
           <%= f.password_field :password_confirmation %>
           </div>
         </div>
-          <%= f.submit "Update", class: "btn btn-primary blue lighten-2 " %>
+          <% if @current_user.email != 'test@mail.com' %>
+            <p><%= f.submit "Update", class: "btn btn-primary blue lighten-2 " %></p>
+            <p><%= link_to "Leave this site", delete_user_path(@user), method: :delete,  data: { confirm: "退会しますか？" }, class: "btn btn  red darken-1" %></p>
+          <% end %>
         <% end %>
-        <div><%= link_to "Leave this site", delete_user_path(@user), method: :delete,  data: { confirm: "退会しますか？" }, class: "btn btn  red darken-1" %></div>
       </div>
     </div>
   </div>
