@@ -5,6 +5,7 @@
           <li><%= link_to "Home",root_path %></li>
           <li><%= link_to "ニュースメディア一覧",publishers_path(category: "general") %></li>
         <% if current_user.present? %>
+          <li><%= link_to "MyPage", user_path(current_user) %></li>
           <li><%= link_to "My単語一覧", user_words_path(current_user) %></li>
           <li><%= link_to "ニュースの新規登録" , new_user_article_path(current_user) %></li>
         <% end %>
