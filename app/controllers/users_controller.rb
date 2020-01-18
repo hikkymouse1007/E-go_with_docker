@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       flash[:success] = "Hello #{@user.name}! Welcome to E-go!!"
       redirect_back_or root_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -73,7 +73,7 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated!"
       redirect_to @user
     else
-      render 'edit'
+      render :edit
     end
   end
 

@@ -9,5 +9,5 @@ class UserArticle < ApplicationRecord
   validates  :url,              presence: true
   validates  :published_at,     presence: true
   validates  :category,         presence: true
-  enum category: { "---" => 0, "経済" => 1, "エンターテイメント" => 2, "一般" => 3, "医療" => 4, "科学" => 5, "スポーツ" => 6, "テクノロジー" => 7, "その他" => 8 }
+  enum category: {  "経済" => 0, "エンターテイメント" => 1, "一般" => 2, "医療" => 3, "科学" => 4, "スポーツ" => 5, "テクノロジー" => 6, "その他" => 7 }
 end

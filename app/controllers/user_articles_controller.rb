@@ -26,17 +26,12 @@ class UserArticlesController < ApplicationController
     target = "ja"
     @article.japanese_title = translate.translate @article.title, to: target
     @article.japanese_content = translate.translate @article.content, to: target
-    unless @article.category == "---"
-      if @article.save
-        flash[:success] = "Article created!"
-        redirect_to user_article_path(@article)
-      else
-        flash.now[:danger] = '記入漏れがあります'
-        render 'new'
-      end
+    if @article.save
+      flash[:success] = "Article created!"
+      redirect_to user_article_path(@article)
     else
-      flash.now[:danger] = 'カテゴリーを選んでください'
-      render 'new'
+      flash[:danger] = '記入漏れがあります'
+      redirect_to "/user_articles/new?publishedAt=#{@article.published_at}&title=#{@article.title}&url=#{@article.url}"
     end
   end
 
@@ -51,16 +46,11 @@ class UserArticlesController < ApplicationController
     target = "ja"
     @article.japanese_title = translate.translate @article.title, to: target
     @article.japanese_content = translate.translate @article.content, to: target
-    unless @article.category == "---"
-      if @article.update(user_article_params)
-        redirect_to user_article_path(@article), notice: 'Article updated!'
-      else
-        flash.now[:danger] = '記入漏れがあります'
-        render :edit
-      end
+    if @article.update(user_article_params)
+      redirect_to user_article_path(@article), notice: 'Article updated!'
     else
-      flash.now[:danger] = 'カテゴリーを選んでください'
-      render 'new'
+      flash.now[:danger] = '記入漏れがあります'
+      render :edit
     end
   end
 
