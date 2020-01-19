@@ -11,7 +11,11 @@
           <div class="card white hoverable">
               <a class="modal-trigger" href="#<%= headline.title %>">
                 <div class="card-image">
-                <%=  image_tag headline.urlToImage,size:"auto" %>
+                <% if headline.urlToImage.present? %>
+                  <%=  image_tag headline.urlToImage,size:"auto" %>
+                <% else %>
+                  <%=  image_tag "no-image.png" ,size:"auto" %>
+                <% end %>
                 </div>
                 <div class="card-content black-text">
                   <p><%= headline.title %></p>

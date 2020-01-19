@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       flash[:success] = "Hello #{@user.name}! Welcome to E-go!!"
       redirect_back_or root_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -73,13 +73,13 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated!"
       redirect_to @user
     else
-      render 'edit'
+      render :edit
     end
   end
 
   def destroy
     @user = User.find(params[:id]).destroy
-    flash[:success] = "See ya later! Hope you come back here!!"
+    flash[:success] = "See you later! Hope you come back here!!"
     redirect_to root_url
   end
 

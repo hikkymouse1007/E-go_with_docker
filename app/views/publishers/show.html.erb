@@ -12,13 +12,13 @@
           <div class="col s12 m3">
             <div class="card white hoverable">
               <a class="modal-trigger" href="#<%= headline.title %>">
-                <% if headline.urlToImage.present? %>
-                  <% if headline.urlToImage.include?("jpg") || headline.urlToImage.include?("png") %>
-                    <div class="card-image">
-                      <%=  image_tag headline.urlToImage,size:"auto" %>
-                    </div>
-                  <% end %>
+                <div class="card-image">
+                <% if headline.urlToImage.present?  %>
+                  <%=  image_tag headline.urlToImage,size:"auto" %>
+                <% else %>
+                  <%=  image_tag "no-image.png" ,size:"auto" %>
                 <% end %>
+                </div>
                 <div class="card-content black-text">
                   <p><%= headline.title %></p>
                 </div>

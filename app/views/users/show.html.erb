@@ -1,20 +1,19 @@
 <div class="container">
   <div class="inner">
-  <%= render partial: 'shared/link_nav_user' %>
-  <nav>
-    <div class="nav-wrapper  green lighten-2">
-      <ul id="nav-mobile" class="list-center hide-on-med-and-down">
-        <li><%= link_to "全記事", user_path %></li>
-        <% @categories.each do |key, value| %>
-        <li><%= link_to key, user_path(category:value) %></li>
-        <% end %>
-     </ul>
-    </div>
-  </nav>
-  <div class="inner ">
-    <div class="row">
-      <h1 class="center">マイページ</h1>
-        <div class="col s12">
+    <%= render partial: 'shared/link_nav_user' %>
+    <nav>
+      <div class="nav-wrapper  green lighten-2">
+        <ul id="nav-mobile" class="list-center hide-on-med-and-down">
+          <li><%= link_to "全記事", user_path %></li>
+          <% @categories.each do |key, value| %>
+          <li><%= link_to key, user_path(category:value) %></li>
+          <% end %>
+       </ul>
+      </div>
+    </nav>
+      <div class="row">
+        <h1 class="center">マイページ</h1>
+        <div class="col s12 " >
           <% @articles.each do |article| %>
             <div class="card white hoverable">
               <div class="card-content ">
@@ -41,10 +40,8 @@
           <% end %>
         </div>
       </div>
-    </div>
   </div>
   <div class="pagination center-align">
     <%= paginate @articles %>
   </div>
 </div>
-

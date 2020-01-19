@@ -16,6 +16,7 @@ class UserArticlesController < ApplicationController
     @title = params[:title]
     @published_at = params[:publishedAt]
     @url = params[:url]
+    @content = params[:content]
   end
 
   def create
@@ -30,8 +31,7 @@ class UserArticlesController < ApplicationController
       flash[:success] = "Article created!"
       redirect_to user_article_path(@article)
     else
-      flash.now[:danger] = '記入漏れがあります'
-      render 'new'
+      redirect_to "/user_articles/new?publishedAt=#{@article.published_at}&title=#{@article.title}}&content=#{@article.content}&url=#{@article.url}", notice: '記入漏れがあります'
     end
   end
 
