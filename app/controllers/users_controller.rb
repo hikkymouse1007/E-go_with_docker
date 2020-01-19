@@ -79,7 +79,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id]).destroy
-    flash[:success] = "See ya later! Hope you come back here!!"
+    flash[:success] = "See you later! Hope you come back here!!"
     redirect_to root_url
   end
 
