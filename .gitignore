@@ -41,6 +41,7 @@
 .env.development
 .env.production
 
+.DS_Store
 
 
 
