@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User do
+describe User, "モデルに関するテスト", type: :model do
   it "有効なファクトリを持つこと" do
     expect(FactoryBot.build(:user)).to be_valid
   end
@@ -34,7 +34,6 @@ describe User do
     user = FactoryBot.build(:user, password_confirmation: "fooobar")
     user.valid?
     expect(user.errors).to be_added(:password_confirmation, :confirmation, attribute: "Password")
-
   end
 
   it '名前が50文字を越えるなら無効であること' do
@@ -49,10 +48,9 @@ describe User do
       expect(user.errors).to be_added(:password, :too_short, count: 6)
   end
 
-  it 'パスワードが暗号化されているか' do
+  it 'パスワードが暗号化されていること' do
     user = FactoryBot.create(:user)
     expect(user.password_digest).to_not eq 'foobar'
   end
-
 end
 
