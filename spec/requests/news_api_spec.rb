@@ -1,16 +1,28 @@
 require 'rails_helper'
+require 'webmock/rspec'
 
 RSpec.describe "News Api", type: :request do
 
   before do
-    @news_api_key = ENV["NEWS_API_KEY_ID"]
+    WebMock.enable!
   end
 
-    describe "GET /news_apis" do
-      it "works! (now write some real specs)" do
-      puts "the key is #{@news_api_key}"
-      # get root_path, { "HTTP_AUTHORIZATION"=>"Token token=\"#{@news_api_key}\"" }
-      expect(response).to have_http_status(201)
+  describe "GET /news_apis" do
+    it "APIからのレスポンスを受け取ること" do
+	  stub_request(:get, "https://newsapi.org/v2/sources?apiKey=#{ENV["NEWS_API_KEY_ID"]}&language=en").
+	     with(
+	       headers: {
+	   	  'Accept'=>'*/*',
+	   	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+	   	  'Host'=>'newsapi.org',
+	   	  'User-Agent'=>'Ruby'
+	      }).to_return(
+	           status: 200,
+	           body: "success",
+	           headers: {}
+	         )
+      uri1 = URI.parse("https://newsapi.org/v2/sources?language=en&apiKey=#{ENV["NEWS_API_KEY_ID"]}")
+      p Net::HTTP.get(uri1)
     end
   end
 end

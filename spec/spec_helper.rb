@@ -94,3 +94,11 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+
+# VCR.configure do |c|
+#     c.cassette_library_dir = 'spec/vcr_cassettes'
+#     c.allow_http_connections_when_no_cassette = true
+#     c.hook_into :webmock
+#     c.filter_sensitive_data('<NEWS_API_KEY_ID>') { ENV["NEWS_API_KEY_ID"] }
+# end
