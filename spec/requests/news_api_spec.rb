@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'webmock/rspec'
 
-RSpec.describe "News Api", type: :request do
+RSpec.describe "Google Cloud Translate Api", type: :request do
 
   before do
     WebMock.enable!
