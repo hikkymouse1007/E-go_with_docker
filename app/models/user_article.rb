@@ -8,5 +8,6 @@ class UserArticle < ApplicationRecord
   validates  :japanese_content, presence: true
   validates  :url,              presence: true
   validates  :published_at,     presence: true
+  validates  :category,         presence: true
   enum category: { "経済" => 0, "エンターテイメント" => 1, "一般" => 2, "医療" => 3, "科学" => 4, "スポーツ" => 5, "テクノロジー" => 6, "その他" => 7 }
 end

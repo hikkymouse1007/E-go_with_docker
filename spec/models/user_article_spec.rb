@@ -28,4 +28,10 @@ RSpec.describe UserArticle, "モデルに関するテスト", type: :model do
      user_article.valid?
      expect(user_article.errors).to be_added(:published_at, :blank)
    end
+
+   it "カテゴリがなければ投稿できないこと" do
+     user_article = FactoryBot.build(:user_article, category: nil)
+     user_article.valid?
+     expect(user_article.errors).to be_added(:category, :blank)
+   end
   end
