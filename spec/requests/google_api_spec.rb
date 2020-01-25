@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "GoogleApis", type: :request do
+RSpec.describe "GoogleAPI", type: :request do
   describe "GET /google_api" do
     it "APIからのレスポンスを受けること"
     end
