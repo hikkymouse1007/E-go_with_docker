@@ -9,10 +9,10 @@ module LoginSupport
 
   def sign_up
     visit signup_path
-    fill_in "name", with: "test_user"
-    fill_in "email", with: "test@mail.com"
-    fill_in "password", with: "foobar"
-    fill_in "password_confirmation", with: "foobar"
+    fill_in "user[name]", with: "test_user"
+    fill_in "user[email]", with: "test@mail.com"
+    fill_in "user[password]", with: "foobar"
+    fill_in "user[password_confirmation]", with: "foobar"
     click_button "Create New Account"
   end
   end
