@@ -13,7 +13,11 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require "capybara/rspec"
 RSpec.configure do |config|
+    config.before(:each, type: :system) do
+    driven_by :selenium_chrome_headless
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -94,3 +98,11 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+
+# VCR.configure do |c|
+#     c.cassette_library_dir = 'spec/vcr_cassettes'
+#     c.allow_http_connections_when_no_cassette = true
+#     c.hook_into :webmock
+#     c.filter_sensitive_data('<NEWS_API_KEY_ID>') { ENV["NEWS_API_KEY_ID"] }
+# end
