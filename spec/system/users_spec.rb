@@ -14,7 +14,20 @@ RSpec.describe User, type: :system do
 
     context "ユーザ登録に成功したとき" do
       it "トップページに遷移すること" do
-        expect(page).to have_content "E-go!"
+       stub_request(:get, "https://newsapi.org/v2/sources?apiKey=#{ENV["NEWS_API_KEY_ID"]}&language=en").
+       with(
+         headers: {
+        'Accept'=>'*/*',
+        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'Host'=>'newsapi.org',
+        'User-Agent'=>'Ruby'
+        }).to_return(
+             status: 200,
+             body: "success",
+             headers: {}
+           )
+      uri1 = URI.parse("https://newsapi.org/v2/sources?language=en&apiKey=#{ENV["NEWS_API_KEY_ID"]}")
+      expect(page).to have_content "E-go!"
       end
 
       it "サクセスメッセージが表示されていること" do
