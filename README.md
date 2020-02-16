@@ -18,7 +18,7 @@ http://e-go115.com/
   - RDB
   - EIP
   - Route53
--インフラ(Docker)
+- インフラ(Docker)
   - docker-compose(ローカルのみ)
 - データベース
   - MySQL
